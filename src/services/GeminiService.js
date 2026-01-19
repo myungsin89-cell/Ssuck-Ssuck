@@ -7,9 +7,12 @@ let genAI = null;
 if (API_KEY) {
     try {
         genAI = new GoogleGenerativeAI(API_KEY);
+        console.log("Gemini AI Initialized with Key");
     } catch (e) {
         console.error("Gemini AI Init Failed:", e);
     }
+} else {
+    console.error("CRITICAL: VITE_GEMINI_API_KEY is missing! Check Vercel Env Variables.");
 }
 
 const SYSTEM_INSTRUCTION = `
@@ -32,23 +35,31 @@ const SYSTEM_INSTRUCTION = `
 class GeminiService {
     constructor() {
         this.model = null;
+        this.chat = null;
+        this.init();
+    }
+
+    init() {
         if (genAI) {
             try {
                 this.model = genAI.getGenerativeModel({
-                    model: "gemini-2.0-flash",
+                    model: "gemini-1.5-flash",
                     systemInstruction: SYSTEM_INSTRUCTION
                 });
             } catch (error) {
                 console.error("Model Init Failed:", error);
             }
         }
-        this.chat = null;
     }
 
     async startChat(history = []) {
         if (!this.model) {
-            console.warn("Gemini Model is not initialized (Missing API Key?)");
-            return;
+            console.warn("Attempting to re-init Gemini model...");
+            this.init();
+            if (!this.model) {
+                console.error("Gemini Model is not initialized (Missing API Key?)");
+                return;
+            }
         }
         try {
             this.chat = this.model.startChat({
@@ -67,6 +78,10 @@ class GeminiService {
     async sendMessage(message, contextData = null) {
         if (!this.chat) {
             await this.startChat();
+        }
+
+        if (!this.chat) {
+            return "쑥쑥 선생님이 아직 상담 준비 중이에요. (API 키 확인 필요) 잠시 후 다시 시도해 주세요! 🗝️";
         }
 
         // 현재 날짜 정보 생성 (한국 시간 기준)
@@ -140,7 +155,7 @@ class GeminiService {
             }
 
             if (errorMsg.includes("API_KEY_INVALID")) {
-                return "죄송해요, 아직 쑥쑥 선생님의 상담실 열쇠(API Key)가 꽂혀있지 않아요. 🗝️ 설정에서 키를 확인해주세요!";
+                return "죄송해요, 아직 쑥쑥 선생님의 상담실 열쇠(API Key)가 틀린 것 같아요. 🗝️ 다시 확인해주세요!";
             }
 
             return "잠시 상담실 연결이 불안정해요. ㅠㅠ 모델 설정을 다시 확인하고 곧 돌아올게요! 😭";
@@ -149,6 +164,11 @@ class GeminiService {
 
     // [New] 관찰 기록 문맥 분석
     async analyzeObservation(logText, currentAgeMonths, milestones) {
+        if (!genAI) {
+            console.error("AI Analysis failed: genAI is not initialized");
+            return { isMatched: false };
+        }
+
         const prompt = `
             당신은 세계 최고의 아동 발달 전문가입니다.
             부모님이 작성한 '관찰 기록'을 분석하여, 제공된 '표준 발달 데이터' 중 가장 부합하는 항목을 딱 하나만 찾아주세요.
@@ -179,8 +199,8 @@ class GeminiService {
         `;
 
         try {
-            // 분석은 2.0 Flash 모델로 수행
-            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+            // 분석 모델도 1.5 flash로 통일 (더 안정적임)
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
             const result = await model.generateContent(prompt);
             const response = await result.response;
             const text = response.text();
