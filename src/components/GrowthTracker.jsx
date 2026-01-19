@@ -144,7 +144,7 @@ const GrowthTracker = ({ childId, child: childProp }) => {
                 marginBottom: '20px'
             }}>
                 <h3 style={{ color: 'var(--primary-dark)', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    📈 우리 아이 성장 기록
+                    📈 우리 아이 성장 기록 ({child.gender === 'female' ? '여아' : '남아'})
                 </h3>
 
                 <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
