@@ -1,0 +1,2907 @@
+[
+  {
+    "target_month": 2,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Calms down when spoken to or picked up",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Looks at your face",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Seems happy to see you when you walk up to her",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Smiles when you talk to or smile at her",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Makes sounds other than crying",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Reacts to loud sounds",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Watches you as you move",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Looks at a toy for several seconds",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Holds head up when on tummy",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Moves both arms and both legs",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Opens hands briefly",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your baby do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your baby likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your baby does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your baby lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your baby have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Respond positively to your baby. Act excited, smile, and talk to him when he makes sounds. This teaches him to take turns \"talking\" back and forth in conversation.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk, read, and sing to your baby to help her develop and understand language.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Spend time cuddling and holding your baby. This will help him feel safe and cared for. You will not spoil your baby by holding or responding to him.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Being responsive to your baby helps him learn and grow. Limiting your screen time when you are with your baby helps you be responsive.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Take care of yourself. Parenting can be hard work! It's easier to enjoy your new baby when you feel good yourself.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Learn to notice and respond to your baby's signals to know what she's feeling and needs. You will feel good and your baby will feel safe and loved. For example, is she trying to \"play\" with you by making sounds and looking at you, or is she turning her head away, yawning, or becoming fussy because she needs a break?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Lay your baby on his tummy when he is awake and put toys at eye level in front of him. This will help him practice lifting his head up. Do not leave your baby alone. If he seems sleepy, place him on his back in a safe sleep area (firm mattress with no blankets, pillows, bumper pads, or toys).",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Feed only breast milk or formula to your baby. Babies are not ready for other foods, water or other drinks for about the first 6 months of life.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Learn when your baby is hungry by looking for signs. Watch for signs of hunger, such as putting hands to mouth, turning head toward breast/bottle, or smacking/licking lips.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Look for signs your baby is full, such as closing her mouth or turning her head away from the breast/bottle. If your baby is not hungry, it's ok to stop feeding.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Do not shake your baby or allow anyone else to—ever! You can damage his brain or even cause his death. Put your baby in a safe place and walk away if you're getting upset when he is crying. Check on him every 5–10 minutes. Infant crying is often worse in the first few months of life, but it gets better!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have routines for sleeping and feeding. This will help your baby begin to learn what to expect.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Hold a rattle off to one side of your baby's head, shake it, and see if your baby looks for the noise.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Practice staying calm when your baby is upset by talking softly, holding, rocking, or singing to her. This will help her calm down and lessen her stress and fears.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to video calling with loved ones. Screen time is not recommended for children younger than 2 years of age. Babies learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk and play with your baby while feeding, dressing, and bathing.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your baby learn some ways to self-soothe by letting her suck on her fingers or a pacifier.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Copy your baby's sounds and see how long your baby \"talks\" by making sounds back and forth with you.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Place a baby-safe mirror near your baby so she can look at herself. She will begin to develop a sense of who she is.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Look at pictures with bright colors or faces with your baby and talk about them.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Baby By Two Months",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most babies do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 4,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Smiles on his own to get your attention",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Chuckles (not yet a full laugh) when you try to make him laugh",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Looks at you, moves, or makes sounds to get or keep your attention",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Makes sounds like “oooo”, “aahh” (cooing)",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Makes sounds back when you talk to him",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Turns head towards the sound of your voice",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "If hungry, opens mouth when he sees breast or bottle",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Looks at her hands with interest",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Holds head steady without support when you are holding him",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Holds a toy when you put it in his hand",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Uses his arm to swing at toys",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Brings hands to mouth",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Pushes up onto elbows/forearms when on tummy",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your baby do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your baby likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your baby does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your baby lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your baby have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Respond positively to your baby. Act excited, smile, and talk to him when he makes sounds. This teaches him to take turns \"talking\" back and forth in conversation.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Provide safe opportunities for your baby to reach for toys, kick at toys and explore what is around her. For example, put her on a blanket with safe toys.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Allow your baby to put safe things in his mouth to explore them. This is how babies learn. For example, let him see, hear, and touch things that are not sharp, hot, or small enough to choke on.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk, read, and sing to your baby. This will help her learn to speak and understand words later.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, phones, tablets, etc.) to video calling with loved ones. Screen time is not recommended for children younger than 2 years of age. Babies learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Feed only breast milk or formula to your baby. Babies are not ready for other foods, water or other drinks for about the first 6 months of life.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your baby safe toys to play with that are easy to hold, like rattles or cloth books with colorful pictures for her age.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your baby have time to move and interact with people and objects throughout the day. Try not to keep your baby in swings, strollers, or bouncy seats for too long.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Set steady routines for sleeping and feeding.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Lay your baby on her back and show her a bright-colored toy. Move the toy slowly from left to right and up and down to see if she watches how the toy moves.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sing and talk to your baby as you help her \"exercise\" (move her body) for a few minutes. Gently bend and move her arms and legs up and down.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play with your baby by holding him securely under his arms with his feet on your lap. Let him bounce up and down.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play games, such as peek-a-boo. You can cover your eyes with your hands and then uncover and say \"peek-a-boo.\" Watch for your baby's smile or other signs he is enjoying the game.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Pay close attention to how your baby reacts to different things. This will help you learn what she likes and doesn't like and what makes her feel good.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Copy your baby's sounds and see how long your baby \"talks\" back and forth with you.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your baby by his name to help him learn it. He will start to recognize it around 9 months. For example, \"Are you ticklish, Jordan?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Playing on the floor or play mat with your baby every day helps him to move, learn, and explore.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Hold and talk to your baby; smile and be cheerful while you do.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have quiet play times when you \"read\" or sing to your baby.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Baby By Four Months",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most babies do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 6,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Knows familiar people",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Likes to look at self in a mirror",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Laughs",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Takes turns making sounds with you",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Blows “raspberries” (sticks tongue out and blows)",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Makes squealing noises",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Puts things in her mouth to explore them",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Reaches to grab a toy she wants",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "s lips to show she doesn’t want more food",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Rolls from tummy to back",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Pushes up with straight arms when on tummy",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Leans on hands to support herself when sitting",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your baby do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your baby likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your baby does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your baby lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your baby have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use \"back and forth\" play with your baby. When your baby smiles, you smile; when he makes sounds, you copy them. This helps him learn to be social.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "\"Read\" to your baby every day by looking at colorful pictures in magazines or books and talk about them. Respond to her when she babbles and \"reads\" too. For example, if she makes sounds, say \"Yes, that's the doggy!\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Point out new things to your baby and name them. For example, when on a walk, point out cars, trees, and animals.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sing to your baby and play music. This will help his brain develop.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to video calling with loved ones. Screen time is not recommended for children younger than 2 years of age. Babies learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "When your baby looks at something, point to it and talk about it.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Put your baby on her tummy or back and put toys just out of reach. Encourage her to roll over to reach the toys.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Learn to read your baby's moods. If he's happy, keep doing what you are doing. If he's upset, take a break and comfort your baby.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk with your baby's doctor about when to start solid foods and what foods are choking risks. Breast milk or formula is still the most important source of \"food\" for your baby.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Learn when your baby is hungry or full. Pointing to foods, opening his mouth to a spoon, or getting excited when seeing food are signs that he is hungry. Others, like pushing food away, closing his mouth, or turning his head away from food tells you that he's had enough.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your baby learn she can calm down. Talk softly, hold, rock, or sing to her, or let her suck on her fingers or a pacifier. You may offer a favorite toy or stuffed animal while you hold or rock her.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Hold your baby up while she sits. Let her look around and give her toys to look at while she learns to balance herself.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Hold your baby with both of your hands securely under her arms and let her stand. Look around with your baby and name what you can see while she is standing.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Introduce your baby to different sounds and voices. For example, whisper, clap, or make funny noises. See if your baby looks or is curious and see which sounds she prefers.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Playing on the floor or play mat with your baby every day helps him to move, learn, and explore.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "When he drops a toy on the floor, pick it up and give it back. This game helps him learn cause and effect.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Baby By Six Months",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most babies do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 9,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Is shy, clingy, or fearful around strangers",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Shows several facial expressions, like happy, sad, angry, and surprised",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Looks when you call her name",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Reacts when you leave (looks, reaches for you, or cries)",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Smiles or laughs when you play peek-a-boo",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Makes a lot of different sounds like “mamamama” and “bababababa”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Lifts arms up to be picked up",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Looks for objects when dropped out of sight (like his spoon or toy)",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Bangs two things together",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Gets to a sitting position by herself",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Moves things from one hand to her other hand",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Uses fingers to “rake” food towards himself",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sits without support",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your baby do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your baby likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your baby does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your baby lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your baby have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Repeat your baby's sounds and say simple words using those sounds. For example, if your baby says \"bababa,\" repeat \"bababa,\" then say \"book.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Place toys on the ground or on a play mat a little out of reach and encourage your baby to crawl, scoot, or roll to get them. Celebrate when she reaches them.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your baby to wave \"bye-bye\" or shake his head \"no.\" For example, wave and say \"bye-bye\" when you are leaving. You can also teach simple baby sign language to help your baby tell you what he wants before he can use words.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play games, such as peek-a-boo. You can cover your head with a cloth and see if your baby pulls it off.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play with your baby by dumping blocks from a container and putting them back in together.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play games with your baby, such as my turn, your turn. Try this by passing a toy back and forth.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "\"Read\" to your baby. Reading can be talking about pictures. For example, while looking at books or magazines, name the pictures as you point to them.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to video calling with loved ones. Screen time is not recommended for children younger than 2 years of age. Babies learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Find out about choking risks and safe foods to feed your baby. Let him practice feeding himself with his fingers and using a cup with a small amount of water. Sit next to your baby and enjoy mealtime together. Expect spills. Learning is messy and fun!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for behaviors that you want. For example, instead of saying \"don't stand,\" say \"time to sit.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your baby get used to foods with different tastes and textures. Foods can be smooth, mashed, or finely chopped. Your baby might not like every food on the first try. Give her a chance to try foods again and again.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Say a quick and cheerful goodbye instead of sneaking away so your baby knows you are leaving, even if he cries. He will learn to calm himself and what to expect. Let him know when you return by saying \"Daddy's back!\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have routines for sleeping and feeding. Babies do better when they know what to expect.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Stay close by as your baby explores and moves around your home so she knows that you are near.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Make sure your baby gets enough sleep: 4- to 12-month-olds need 12 to 16 hours of sleep a day (including naps). Consistent sleep times make it easier!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Take care of yourself. Parenting can be hard work! It is easier to enjoy your growing baby and be a loving parent when you feel good yourself.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Make it a game when your baby drops things. Hand the item back to her so she can drop it again.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Pay attention to the way he reacts to new situations and people; try to continue to do things that make your baby happy and comfortable.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Describe what your baby is looking at; for example, \"red, round ball.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play a game that teaches your baby to look for things she sees you hide, such as a toy under a blanket.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your baby safe places to explore. Baby-proof your home. For example, move sharp or breakable things out of reach. Lock away medicines, chemicals, and cleaning products. Save the Poison Help Line number, 800-222-1222, in all phones.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use your words, facial expressions, and voice to show what you think your baby is feeling (sad, mad, happy). For example, tell him \"You are sad, let's see if we can make you feel better.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Put your baby close to things that she can pull up on safely.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Baby By Nine Months",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most babies do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 12,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Plays games with you, like pat-a-cake",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Waves “bye-bye”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Calls a parent “mama” or “dada” or another special name",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Understands “no” (pauses briefly or stops when you say it)",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Puts something in a container, like a block in a cup",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Looks for things he sees you hide, like a toy under a blanket",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Pulls up to stand",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Walks, holding on to furniture",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Drinks from a cup without a lid, as you hold it",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Picks things up between thumb and pointer finger, like small bits of food",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your baby do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your baby likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your baby does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your baby lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your baby have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your baby \"wanted behaviors.\" Show her what to do and use positive words or give her hugs and kisses when she does it. For example, if she pulls your pet's tail, teach her how to pet gently and give her a hug when she does it.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk or sing to your baby about what you're doing. For example, \"Mommy is washing your hands\" or sing, \"This is the way we wash our hands.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Build on what your baby tries to say. If he says \"ta,\" say \"Yes, a truck,\" or if he says \"truck,\" say \"Yes, that's a big, blue truck.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Redirect your baby quickly and consistently by giving her a toy or moving her if she is getting into things you don't want her to get into. Save \"no\" for behaviors that are dangerous. When you say \"no,\" say it firmly. Do not spank, yell, or give her long explanations.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your baby safe places to explore. Baby-proof your home. For example, move sharp or breakable things out of reach. Lock away medicines, chemicals, and cleaning products. Save the Poison Help Line number, 800-222-1222, in all phones.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Respond with words when your baby points. Babies point to ask for things. For example, say \"You want the cup? Here is the cup. It's your cup.\" If he tries to say \"cup,\" celebrate his attempt.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Point to interesting things you see, such as a truck, bus, or animals. This will help your baby pay attention to what others are \"showing\" him through pointing.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to video calling with loved ones. Screen time is not recommended for children younger than 2 years of age. Babies learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your baby water, breast milk, or plain milk. You don't need to give your baby juice, but if you do, give 4 ounces or less a day of 100% fruit juice. Do not give your baby other sugary beverages, such as fruit drinks, soda, sports drinks, or flavored milks.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your baby get used to foods with different tastes and textures. Foods can be smooth, mashed, or finely chopped. Your baby might not like every food on the first try. Give your baby a chance to try foods again and again.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your baby time to get to know a new caregiver. Bring a favorite toy, stuffed animal, or blanket to help comfort your baby.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your baby pots and pans or a small musical instrument like a drum or cymbals. Encourage your baby to make noise.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Find out about foods that are choking risks. Let your baby practice feeding himself safe foods with his fingers and using a cup with a small amount of water. Sit next to your baby and enjoy mealtime together. Expect spills. Learning is messy and fun!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Make sure your baby gets enough sleep: 4- to 12-month-olds need 12 to 16 hours of sleep a day (including naps). Consistent sleep times make it easier!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "\"Read\" books with your baby. Reading can be talking about pictures. Babies this age like books with things they can feel or flaps they can lift.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play together with blocks and other toys that encourage your baby to use her hands.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Babies learn to calm themselves from caregivers who are calm and make them feel safe. Help your baby learn she can calm down by talking softly, holding, rocking, or singing to her. Let her suck on her fingers or a pacifier.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your baby push things around, such as empty boxes, a \"kiddie chair,\" or \"push toys,\" so he can practice walking.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your baby to practice walking on her own. Baby walkers are not recommended. Let her hold your hands or hold onto furniture that is safe.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Baby By One Year",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most babies do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 15,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Copies other children while playing, like taking toys out of a container when another child does",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Shows you an object she likes",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Claps when excited",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Hugs stuffed doll or other toy",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Shows you affection (hugs, cuddles, or kisses you)",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Tries to say one or two words besides “mama” or “dada,” like “ba” for ball or “da” for dog",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Looks at a familiar object when you name it",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Follows directions given with both a gesture and words. For example, he gives you a toy when you hold out your hand and say, “Give me the toy.”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Points to ask for something or to get help",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Tries to use things the right way, like a phone, cup, or book",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Stacks at least two small objects, like blocks",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Takes a few steps on his own",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Uses fingers to feed herself some food",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your child do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your child likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your child does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your child lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your child have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child learn to speak. A child's early words are not complete. Repeat and add to what he says. He may say \"ba\" for ball and you can say \"Ball, yes, that's a ball.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tell your child the names of objects when he points to them and wait a few seconds to see if he makes any sounds before handing it to him. If he does make a sound, acknowledge him, and repeat the name of the object. \"Yes! Cup.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Find ways to let your child help with everyday activities. Let her get her shoes to go outside, put the snacks in the bag for the park, or put the socks in the basket.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have steady routines for sleeping and feeding. Create a calm, quiet bedtime for your child. Put on his pajamas, brush his teeth, and read 1 or 2 books to him. Children between 1 and 2 years of age need 11 to 14 hours of sleep a day (including naps). Consistent sleep times make it easier!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Show your child different things, such as a hat. Ask him, \"What do you do with a hat? You put it on your head.\" Put it on your head and then give it to him to see if he copies you. Do this with other objects, such as a book or a cup.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sing songs with gestures, such as \"Wheels on the Bus.\" See if your child tries to do some of the actions.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Say what you think your child is feeling (for example, sad, mad, frustrated, happy). Use your words, facial expressions, and voice to show what you think she is feeling. For example, say \"You are frustrated because we can't go outside, but you can't hit. Let's go look for an indoor game.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Expect tantrums. They are normal at this age and are more likely if your child is tired or hungry. Tantrums should become shorter and happen less as he gets older. You can try a distraction, but it is ok to let him have the tantrum without doing anything. Give him some time to calm down and move on.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your child \"wanted behaviors.\" Show her what to do and use positive words or give her hugs and kisses when she does it. For example, if she pulls your pet's tail, teach her how to pet gently. Give her a hug when she does it.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to video calling with loved ones. Screen time is not recommended for children younger than 2 years of age. Children learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to play with blocks. You can stack the blocks and she can knock them down.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child use a cup without a lid for drinking and practice eating with a spoon. Learning to eat and drink is messy but fun!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child water, breast milk, or plain milk. You don't need to give your child juice, but if you do, give 4 ounces or less a day of 100% fruit juice. Do not give your child other sugary beverages, such as fruit drinks, soda, sports drinks, or flavored milks.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your baby safe places to explore. Baby-proof your home. For example, move sharp or breakable things out of reach. Lock away medicines, chemicals, and cleaning products. Save the Poison Help Line number, 800-222-1222, in all phones.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Continue to talk, read, sing, and tell your child the names of things throughout the day. She will try to say and learn many new words, which can help her read later on.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Make a \"book\" with pictures of people and pets in your child's life. Name them as you look through the book together. Include a picture of your child.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sing or play children's songs and songs your family enjoys. Dance with your child.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Read a new book after a favorite one to explore and try new books. Children like to do favorite things again and again. You can use the things they like to do to introduce new things.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play simple games, such as hide and seek. Let your child watch you hide behind a chair and then wait for her to come \"find\" you.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Make up a simple \"cleanup song\" and sing it while you teach your child to help \"clean up.\" Have him help put toys in a basket or hand you things to put away.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "You can teach simple gestures and sign language (for example, pointing and waving) to help your child \"talk\" to you and show you what she wants.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "\"Pretend talk\" to your child with a stuffed animal. See if your child tries to copy you or if he uses another stuffed animal to \"talk\" with the one you are holding.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Blow bubbles and let your child pop them. Say things as she pops them, such as \"Pop, pop.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Child By Fifteen Months",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most children do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 18,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Moves away from you, but looks to make sure you are close by",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Points to show you something interesting",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Puts hands out for you to wash them",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Looks at a few pages in a book with you",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Helps you dress him by pushing arm through sleeve or lifting up foot",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Tries to say three or more words besides “mama” or “dada”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Follows one-step directions without any gestures, like giving you the toy when you say, “Give it to me.”",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Copies you doing chores, like sweeping with a broom",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Plays with toys in a simple way, like pushing a toy car",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Walks without holding on to anyone or anything",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Scribbles",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Drinks from a cup without a lid and may spill sometimes",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Feeds himself with his fingers",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tries to use a spoon",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Climbs on and off a couch or chair without help",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your child do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your child likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your child does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your child lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your child have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use positive words and give more attention to behaviors you want to see (\"wanted behaviors\"). For example, \"Look how nicely you put the toy away.\" Give less attention to those you don't want to see.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage \"pretend\" play. Give your child a spoon so she can pretend to feed her stuffed animal. Take turns pretending.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child learn about others' feelings and about positive ways to react. For example, when he sees a child who is sad, say \"He looks sad. Let's bring him a teddy.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask simple questions to help your child think about what's around her. For example, ask her, \"What is that?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child use a cup without a lid for drinking and practice eating with a spoon. Learning to eat and drink is messy but fun!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give simple choices. Let your child choose between two things. For example, when dressing, ask him if he wants to wear the red or blue shirt.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have steady routines for sleeping and eating. For example, sit at the table with your child when she's eating meals and snacks. This helps set mealtime routines for your family.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to video calling with loved ones. Screen time is not recommended for children younger than 2 years of age. Children learn by talking, playing, and interacting with others. Limit your own screen time when you are with your child so you are able to respond to her words and actions.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask your child's doctor and/or teachers if your child is ready for toilet training. Most children are not successful at toilet training until 2 to 3 years old. If he is not ready, it can cause stress and setbacks, which can cause training to take longer.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Expect tantrums. They are normal at this age and should become shorter and happen less often as your child gets older. You can try distractions, but it's ok to ignore the tantrum. Give him some time to calm down and move on.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk with your child by facing her and getting down to her eye level when possible. This helps your child \"see\" what you're saying through your eyes and face, not just your words.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Start to teach your child the names for body parts by pointing them out and saying things like \"Here's your nose, here's my nose,\" while pointing to her nose and your own.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Try to respond to your child's behavior in a safe, and loving way. Stay consistent as much as possible.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your child more words by adding to the words she says. For example, if she says \"Dog,\" say \"Yes, that's a dog. Dogs say 'woof, woof.'\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play with your child by rolling balls back and forth, pushing toy cars, and putting blocks or other items in and out of containers.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Read books and talk about the pictures using simple words.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play simple games where both of you have a part to play. Blow bubbles and let your child pop them. Say things as he pops them, such as \"Pop, pop.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Create a spot in your home for your child to go to when he's upset. Stay nearby so your child knows he is safe and can come to you for help calming as needed.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give toys that your child can push or pull safely.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give toys and things to your child that encourage \"pretend\" play, such as a doll and a baby blanket.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Child By Eighteen Months",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most children do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 24,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Notices when others are hurt or upset, like pausing or looking sad when someone is crying",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Looks at your face to see how to react in a new situation",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Points to things in a book when you ask, like “Where is the bear?”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says at least two words together, like “More milk.”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Points to at least two body parts when you ask him to show you",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Uses more gestures than just waving and pointing, like blowing a kiss or nodding yes",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Holds something in one hand while using the other hand; for example, holding a container and taking the lid off",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Tries to use switches, knobs, or buttons on a toy",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Plays with more than one toy at the same time, like putting toy food on a toy plate",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Kicks a ball",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Walks (not climbs) up a few stairs with or without help",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Eats with a spoon",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your child do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your child likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your child does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your child lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your child have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child learn how words sound, even if he can't say them clearly yet. For example, if your child says, \"or nana,\" say \"You want more banana.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Watch your child closely during playdates. Children this age play next to each other, but do not know how to share and solve problems. Show your child how to deal with conflicts by helping her share, take turns, and use words when possible.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have your child help you get ready for mealtime, by letting him carry things to the table, such as plastic cups or napkins. Thank your child for helping.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child balls to kick, roll, and throw.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give toys that teach your child how to make things work and how to solve problems. For example, give her toys where she can push a button and something happens.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child play dress up with grown-up clothes, such as shoes, hats, and shirts. This helps him begin to pretend play.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Allow your child to eat as much or as little as she wants at each meal. Toddlers don't always eat the same amount or type of food each day. Your job is to offer her healthy foods and it's your child's job to decide if and how much she needs to eat.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have steady routines for sleeping and feeding. Create a calm, quiet bedtime for your child. Put on his pajamas, brush his teeth, and read 1 or 2 books to him. Children this age need 11 to 14 hours of sleep a day (including naps). Consistent sleep times make it easier.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask your child's doctor and/or teachers about toilet training to know if your child is ready to start. Most children are not able to toilet train until 2 to 3 years old. Starting too early can cause stress and setbacks, which can cause training to take longer.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use positive words when your child is being a good helper. Let him help with simple chores, such as putting toys or laundry in a basket.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play with your child outside, by playing \"ready, set, go.\" For example, pull your child back in a swing. Say \"Ready, set....\", then wait and say \"Go\" when you push the swing.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child create simple art projects with you. Give your child crayons or put some finger paint on paper and let her explore by spreading it around and making dots. Hang it on the wall or refrigerator so your child can see it.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use positive words and give more attention to behaviors you want to see (\"wanted behaviors\"), than to those you don't want to see. For example, say \"Look how well you're eating with your spoon.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child play with sand toys or plastic containers, spoons, or a funnel in the tub or in a sandbox.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child do simple puzzles with shapes, colors, or animals. Name each piece when your child puts it in place.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child's curiosity and help her learn and explore new things. Take her to the park, take walks, or go on a bus ride.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sing songs, such as \"Head, Shoulders, Knees, and Toes,\" to teach names of body parts. After singing it a few times, see if your child sings some of the words when you touch a body part and wait.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to no more than 1 hour a day of a children's program with an adult present. Children learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to play with blocks. Take turns building towers and knocking them down.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask your child to help you open the drawer when you put away clothes or open the door when you go outside.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Child By Two Years",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most children do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 30,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Plays next to other children and sometimes plays with them",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Shows you what she can do by saying, “Look at me!”",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Follows simple routines when told, like helping to pick up toys when you say, “It’s clean-up time.”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says about 50 words",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says two or more words together, with one action word, like “Doggie run”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Names things in a book when you point and ask, “What is this?”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says words like “I,” “me,” or “we”",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Uses things to pretend, like feeding a block to a doll as if it were food",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Shows simple problem-solving skills, like standing on a small stool to reach something",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Follows two-step instructions like “Put the toy down and close the door.”",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Shows he knows at least one color, like pointing to a red crayon when you ask, “Which one is red?”",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Uses hands to twist things, like turning doorknobs or unscrewing lids",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Takes some clothes off by himself, like loose pants or an open jacket",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Jumps off the ground with both feet",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Turns book pages, one at a time, when you read to her",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your child do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your child likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your child does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your child lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your child have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage \"free play,\" where your child can follow her interests, try new things, and use things in new ways.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use positive words and give more attention to behaviors you want to see (\"wanted behaviors\"), than to those you don't want to see. For example, say \"I like how you gave Jordan the toy.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child food choices that are simple and healthy. Let him choose what to eat for a snack or what to wear. Limit choices to two or three.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask your child simple questions about books and stories. Ask questions, such as \"Who?\" \"What?\" and \"Where?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child learn how to play with other children. Show him how by helping him share, take turns, and use his \"words.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child \"draw\" with crayons on paper, shaving cream on a tray, or chalk on a sidewalk. If you draw a straight line, see if she will copy you. When she gets good at lines, show her how to draw a circle.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child play with other children, such as at a park or library. Ask about local play groups and pre-school programs. Playing with others helps him learn the value of sharing and friendship.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Eat family meals together as much as you can. Give the same meal to everyone. Enjoy each other's company and avoid screen time (TV, tablets, and phones, etc.) during meals.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to no more than 1 hour per day of a children's program with an adult present. Children learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use words to describe things to your child, such as big/small, fast/slow, on/off, and in/out.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child do simple puzzles with shapes, colors, or animals. Name each piece when your child puts it in place.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play with your child outside. For example, take your child to the park to climb on equipment and run in safe areas.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Allow your child to eat as much or as little as she wants at each meal. Your job is to offer her healthy foods and it's your child's job to decide if and how much she wants to eat.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask your child's doctor and/or teachers about toilet training to know if your child is ready to start. Most children are not able to toilet train until 2 to 3 years old. Starting too early can cause stress and setbacks, which can cause training to take longer.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child play with large boxes. He can pretend it is a car, bus, train, or house. Let him color, paint it, and put stickers on it.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play with your child outside by playing \"ready, set, go.\" For example, pull your child back in a swing. Say \"Ready, set...\", then wait and say \"Go\" when you push the swing.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to name colors, body parts, and pictures in books.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Kick a ball back and forth with your child. When your child is good at that, show her how to run and kick the ball.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Have steady routines for sleeping and feeding. Create a calm, quiet bedtime for your child. Put on her pajamas, brush her teeth, and read 1 or 2 books to her. Children this age need 11 to 14 hours of sleep a day (including naps). Consistent sleep times make it easier.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play \"follow the leader\" with your child. Walk in a straight line, make turns, walk backwards, and walk on tiptoes. Let your child lead after you show him how.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Read to your child and visit the local library. This will help your child enjoy reading and be ready to read when she is older.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage \"pretend\" play. For example, let your child pretend to cook using safe things from your kitchen.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Show your child how to turn pages in a book or magazine.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Child By 30 Months",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most children do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 36,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Calms down within 10 minutes after you leave her, like at a childcare drop off",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Notices other children and joins them to play",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Talks with you in conversation using at least two back-and-forth exchanges",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Asks “who,” “what,” “where,” or “why” questions, like “Where is mommy/daddy?”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says what action is happening in a picture or book when asked, like “running,” “eating,” or “playing”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says first name, when asked",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Talks well enough for others to understand, most of the time",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Draws a circle, when you show him how",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Avoids touching hot objects, like a stove, when you warn her",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Strings items together, like large beads or macaroni",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Puts on some clothes by himself, like loose pants or a jacket",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Uses a fork",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your child do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your child likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your child does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your child lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your child have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to solve her own problems with your support. Ask questions to help her understand the problem. Help her think of solutions, try one out, and try more if needed.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk about your child's emotions and give him words to help him explain how he's feeling. Help your child manage stressful feelings by teaching him to take deep breaths, hug a favorite toy, or go to a quiet, safe place when he is upset.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Set a few simple and clear rules that your child can follow, such as use gentle hands when playing. If he breaks a rule, show him what to do instead. Later, if your child follows the rule, recognize and congratulate him.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Read with your child. Ask questions, such as \"What is happening in the picture?\" and/or \"What do you think will happen next?\" When she gives you an answer, ask for more details.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play counting games. Count body parts, stairs, and other things you use or see every day. Children this age are starting to learn about numbers and counting.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child develop his language skills by speaking to him in longer sentences than his, using real words. Repeat what he says, for example, \"need nana,\" and then show how to use more \"grown-up\" words by saying, \"I want a banana.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child help with making meals. Give him simple tasks, such as washing fruits and vegetables or stirring.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child instructions with 2 or 3 steps. For example, \"Go to your room and get your shoes and coat.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to no more than 1 hour per day of a children's program with an adult present. Don't put any screens in your child's bedroom. Children learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your child simple songs and rhymes, such as \"Itsy Bitsy Spider\" or \"Twinkle, Twinkle, Little Star.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child an \"activity box\" with paper, crayons, and coloring books. Color and draw lines and shapes with your child.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to play with other children. This helps him learn the value of friendship and how to get along with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child play with playdough by squishing it, pressing it, pinching it, and making balls in different colors. This builds her hand and finger muscles for writing, buttoning, and cutting.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child simple, healthy food choices. For example, at snack time ask, \"Do you want carrots or an apple?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play games to teach opposites. Get down low and say, \"I am small.\" Then stand up and say, \"I am big.\" Do the same thing for fast/slow, quiet/loud.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play matching games. Ask your child to find objects in books or around the house that are the same.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play outside with your child. Go to the park or a walking trail. Allow your child plenty of time to choose what and how she wants to play. Join her and follow her lead.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child be ready for new places and meeting new people. For example, you can read stories or role play (pretend play) about new places or things to help him feel more comfortable.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to tell you her name and age.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Child By Three Years",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most children do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 48,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Pretends to be something else during play (teacher, superhero, dog)",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Asks to go play with children if none are around, like “Can I play with Alex?”",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Comforts others who are hurt or sad, like hugging a crying friend",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Avoids danger, like not jumping from tall heights at the playground",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Likes to be a “helper”",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Changes behavior based on where she is (place of worship, library, playground)",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says sentences with four or more words",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Says some words from a song, story, or nursery rhyme",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Talks about at least one thing that happened during her day, like “I played soccer.”",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Answers simple questions like “What is a coat for?” or “What is a crayon for?”",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Names a few colors of items",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Tells what comes next in a well-known story",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Draws a person with three or more body parts",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Catches a large ball most of the time",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Serves herself food or pours water, with adult supervision",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Unbuttons some buttons",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Holds crayon or pencil between fingers and thumb (not a fist)",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your child do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your child likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your child does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your child lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your child have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child be ready for new places and meeting new people. For example, you can read stories or role play (pretend play) to help him be comfortable.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Read with your child. Ask him what's happening in the story and what he thinks might happen next.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child learn about colors, shapes, and sizes. For example, ask the color, shapes, and size of things she sees during the day.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to use \"his words\" to ask for things and solve problems but show him how. He may not know the words he needs. For example, help your child say, \"Can I have a turn?\" instead of taking something from someone.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child learn about others' feelings, and about positive ways to react. For example, when he sees a child who is sad, say \"He looks sad. Let's bring him a teddy.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use positive words and give attention to behaviors you want to see (\"wanted behaviors\"). For example, say \"You're sharing that toy so nicely!\" Give less attention to those you don't want to see.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tell your child in a simple way why she can't do something you don't want her to do (\"unwanted behavior\"). Give her a choice of what she can do instead. For example, \"You can't jump on the bed. Do you want to go outside and play or put on some music and dance?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child play with other children, such as at a park or library. Ask about local play groups and pre-school programs. Playing with others helps you child learn the value of sharing and friendship.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Eat meals with your child when possible. Let her see you enjoying healthy foods, such as fruits, vegetables, and whole grains, and drinking milk or water.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Create a calm, quiet bedtime routine. Avoid any screen time (TV, phone, tablet, etc.) for 1 to 2 hours before bed and don't put any screens in your child's bedroom. Children this age need 10 to 13 hours of sleep a day (including naps). Consistent sleep times make it easier!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child toys or things that encourage his imagination, such as dress-up clothes, pots and pans to pretend cook, or blocks to build with. Join him in pretend play, such as eating the pretend food he cooks.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Take time to answer your child's \"why\" questions. If you don't know the answer, say \"I don't know,\" or help your child find the answer in a book, on the Internet, or from another adult.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Count simple things, such as fingers, toys, or bananas. This will help your child learn about numbers and counting.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child choices that are simple and healthy. Let her choose what to wear, play, or eat for a snack. Limit choices to 2 or 3.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Continue to teach your child skills to play with others, such as using words, sharing toys, and taking turns.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your child to play outdoor games with friends, such as tag, follow the leader, and hide and seek.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Spend time speaking to your child in complete sentences, using \"grown-up\" words. This will help her learn better speaking skills and helps with future reading and writing skills.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child help with simple chores, such as bringing in the mail, feeding a pet, or wiping down tables. This helps build independence.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your child to stop and wait when excited by playing red light, green light, or freeze dance (play music, turn it off, and have everyone freeze when it stops).",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play your child's favorite songs and dance with your child. Take turns copying each other's moves.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Give your child time to solve her own problems with friends. For example, if they are arguing over who gets to be which superhero, let them work it out. Stay nearby to help if needed. If they can't work it out, use questions to help them think of other solutions.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use words, such as \"first,\" \"second,\" and \"finally.\" When playing, telling stories, or doing chores, ask your child what comes next. This will help your child learn about the order of events.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Comfort your child if he is afraid and talk about his fears. For example, \"Monsters can feel scary even though they are not real and can't hurt you.\" Help your child learn things he can do when he is afraid, such as hugging a stuffed animal.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play simple games, such as Tic-Tac-Toe or matching games.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Try to make time for active play each day. Your child will have more fun if she can choose the activity. For example, give her choices, such as playing music and dancing together, playing outside, or taking a walk together.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child notice when he hurts someone's feelings by describing what you see. Encourage him to say sorry and help him find a way to make the person feel better.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Take trips to the library to let your child pick out books.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Limit screen time (TV, tablets, phones, etc.) to no more than 1 hour per day of a children's program with an adult present. Don't put any screens in your child's bedroom. Children learn by talking, playing, and interacting with others.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Child By Four Years",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most children do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with your doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  },
+  {
+    "target_month": 60,
+    "data": [
+      {
+        "category": "사회성/정서",
+        "content": "Follows rules or takes turns when playing games with other children",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Sings, dances, or acts for you",
+        "is_red_flag": false
+      },
+      {
+        "category": "사회성/정서",
+        "content": "Does simple chores at home, like matching socks or clearing the table after eating",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Tells a story she heard or made up with at least two events. For example, a cat was stuck in a tree and a firefighter saved it",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Answers simple questions about a book or story after you read or tell it to him",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Keeps a conversation going with more than three back-and-forth exchanges",
+        "is_red_flag": false
+      },
+      {
+        "category": "언어/의사소통",
+        "content": "Uses or recognizes simple rhymes (bat-cat, ball-tall)",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Counts to 10",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Names some numbers between 1 and 5 when you point to them",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Uses words about time, like “yesterday,” “tomorrow,” “morning,” or “night”",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Pays attention for 5 to 10 minutes during activities. For example, during story time or making arts and crafts (screen time does not count)",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Writes some letters in her name",
+        "is_red_flag": false
+      },
+      {
+        "category": "인지(학습/사고)",
+        "content": "Names some letters when you point to them",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Buttons some buttons",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Hops on one foot",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things you and your child do together?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What are some things your child likes to do?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Is there anything your child does or does not do that concerns you?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Has your child lost any skills he/she once had?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Does your child have any special healthcare needs or was he/she born prematurely?",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask for a referral to a specialist who can evaluate your child more; and",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Call your state or territory's early intervention program to find out if your child can get services to help. Learn more and find the number at cdc.gov/FindEI.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Your child might start to \"talk back\" in order to feel independent and test what happens. Limit the attention you give to the negative words. Find alternative activities for her to do that allow her to take the lead and be independent. Make a point of noticing good behavior. \"You stayed calm when I told you it's bedtime.\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Ask your child what she is playing. Help her expand her answers by asking \"Why?\" and \"How?\" For example, say \"That's a nice bridge you're building. Why did you put it there?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play with toys that encourage your child to put things together, such as puzzles and building blocks.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Use words to help your child begin to understand time. For example, sing songs about the days of the week and let him know what day it is. Use words about time, such as today, tomorrow, and yesterday.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child do things for himself, even if he doesn't do it perfectly. For example, let him make his bed, button his shirt, or pour water into a cup. Celebrate when he does it and try not to \"fix\" anything you don't have to.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Talk about and label your child's and your own feelings. Read books and talk about the feelings characters have and why they have them.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play rhyming games. For example, say \"What rhymes with cat?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your child to follow rules in games. For example, play simple board games, card games, or Simon Says.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Create a spot in your home for your child to go to when he's upset. Stay nearby so your child knows he is safe and can come to you for help calming as needed.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Set limits for screen time (TV, tablets, phones, etc.) for your child, to no more than 1 hour per day. Make a media use plan for your family.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Eat meals with your child and enjoy family time talking together. Give the same meal to everyone. Avoid screen time (TV, tablets, phones, etc.) during mealtime. Let your child help prepare the healthy foods and enjoy them together.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to \"read\" by looking at the pictures and telling the story.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Play games that help with memory and attention. For example, play card games, Tic Tac Toe, I Spy, or Hot and Cold.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Let your child play with other children, such as at a park or library. Ask about local play groups and pre-school programs. Playing with others helps your child learn the value of sharing and friendship.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your children about safe touch, such as hugging when both people want to and touches that help keep children healthy (touches from doctors or parents). Unsafe touches are touches that might make a child feel hurt, uncomfortable, scared, or confused. Teach your children that they are in charge of who touches them. Help them practice saying 'no' to unwanted or unsafe touch and let them know there are adults they can turn to for help.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Teach your child to look for \"helpers\" if she is lost or needs help, such as parents with children, a store clerk with a badge, or a police officer. Teach your child her name and your name (first and last names).",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Encourage your child to pretend play. Help your child find items she can use to play dress up, school, or house.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Keep a box of crayons, paper, paint, child scissors, and glue for creative play. Encourage your child to draw and make art projects with different supplies.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Take your child to the playground. Teach her how to pump her legs back and forth on a swing and help her play on the monkey bars.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Create a calm, quiet bedtime routine. Avoid any screen time (TV, tablets, phones, etc.) for 1 to 2 hours before bed and don't put any screens in your child's bedroom. Children this age need 10 to 13 hours of sleep a day (including naps). Consistent sleep times make it easier!",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Read to your child. Ask questions, such as \"What is happening in the picture?\" and \"What do you think will happen next?\"",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Explore things your child likes. For example, if he loves animals, get some library books about animals, look for birds and squirrels in a park, or visit a zoo to learn about animals.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Try to make time for active play each day. Your child will have more fun if she can choose the activity. For example, give her choices, such as playing music and dancing together, playing outside, or taking a walk together.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Your child might start to talk back or use profanity (swear words) as a way to feel independent. Do not give a lot of attention to this talk, other than a brief time out. Instead, praise your child when he asks for things nicely and calmly takes \"no\" for an answer.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Help your child be ready for new places and meeting new people. For example, you can read stories or role play (pretend play) to help her get ready for Kindergarten.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Important Milestones: Your Child By Five Years",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "What most children do by this age:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Other important things to share with the doctor:",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Tips and Activities",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Special acknowledgments to the subject matter experts and others who contributed to the review of data and selection of developmental milestones, especially Paul H. Lipkin, MD, Michelle M. Macias, MD, Julie F. Pajek, PhD, Judith S. Shaw, EdD, MPH, RN, Karnesha Slaughter, MPH, Jane K. Squires, PhD, Toni M. Whitaker, MD, Lisa D. Wiggins, PhD, and Jennifer M. Zubler, MD.",
+        "is_red_flag": false
+      },
+      {
+        "category": "대근육/신체",
+        "content": "Sincere gratitude to Natalia Benza, MD and José O. Rodríguez, MD, MBA for their thoughtful review of the Spanish-language translation of these milestones.",
+        "is_red_flag": false
+      }
+    ]
+  }
+]

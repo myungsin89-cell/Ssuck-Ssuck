@@ -1,0 +1,296 @@
+{
+    "vaccinations": [
+        {
+            "id": "bcg",
+            "name": "BCG (결핵)",
+            "type": "국가필수",
+            "description": "결핵 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 0,
+                    "ageLabel": "생후 4주 이내",
+                    "note": "피내용 또는 경피용"
+                }
+            ]
+        },
+        {
+            "id": "hepb",
+            "name": "B형간염",
+            "type": "국가필수",
+            "description": "B형간염 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 0,
+                    "ageLabel": "출생 직후"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 1,
+                    "ageLabel": "생후 1개월"
+                },
+                {
+                    "dose": 3,
+                    "ageMonths": 6,
+                    "ageLabel": "생후 6개월"
+                }
+            ]
+        },
+        {
+            "id": "dtap",
+            "name": "DTaP (디프테리아/파상풍/백일해)",
+            "type": "국가필수",
+            "description": "디프테리아, 파상풍, 백일해 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 2,
+                    "ageLabel": "생후 2개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 4,
+                    "ageLabel": "생후 4개월"
+                },
+                {
+                    "dose": 3,
+                    "ageMonths": 6,
+                    "ageLabel": "생후 6개월"
+                },
+                {
+                    "dose": 4,
+                    "ageMonths": 15,
+                    "ageLabel": "생후 15~18개월"
+                },
+                {
+                    "dose": 5,
+                    "ageMonths": 48,
+                    "ageLabel": "만 4~6세"
+                }
+            ]
+        },
+        {
+            "id": "ipv",
+            "name": "IPV (폴리오)",
+            "type": "국가필수",
+            "description": "소아마비 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 2,
+                    "ageLabel": "생후 2개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 4,
+                    "ageLabel": "생후 4개월"
+                },
+                {
+                    "dose": 3,
+                    "ageMonths": 6,
+                    "ageLabel": "생후 6개월"
+                },
+                {
+                    "dose": 4,
+                    "ageMonths": 48,
+                    "ageLabel": "만 4~6세"
+                }
+            ]
+        },
+        {
+            "id": "hib",
+            "name": "Hib (b형 헤모필루스 인플루엔자)",
+            "type": "국가필수",
+            "description": "뇌수막염, 폐렴 등 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 2,
+                    "ageLabel": "생후 2개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 4,
+                    "ageLabel": "생후 4개월"
+                },
+                {
+                    "dose": 3,
+                    "ageMonths": 6,
+                    "ageLabel": "생후 6개월"
+                },
+                {
+                    "dose": 4,
+                    "ageMonths": 12,
+                    "ageLabel": "생후 12~15개월"
+                }
+            ]
+        },
+        {
+            "id": "pcv",
+            "name": "PCV (폐렴구균)",
+            "type": "국가필수",
+            "description": "폐렴구균 감염 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 2,
+                    "ageLabel": "생후 2개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 4,
+                    "ageLabel": "생후 4개월"
+                },
+                {
+                    "dose": 3,
+                    "ageMonths": 6,
+                    "ageLabel": "생후 6개월"
+                },
+                {
+                    "dose": 4,
+                    "ageMonths": 12,
+                    "ageLabel": "생후 12~15개월"
+                }
+            ]
+        },
+        {
+            "id": "rv",
+            "name": "RV (로타바이러스)",
+            "type": "국가필수",
+            "description": "로타바이러스 장염 예방 (생후 8개월 0일 이하)",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 2,
+                    "ageLabel": "생후 2개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 4,
+                    "ageLabel": "생후 4개월"
+                },
+                {
+                    "dose": 3,
+                    "ageMonths": 6,
+                    "ageLabel": "생후 6개월",
+                    "note": "백신 종류에 따라 2회 또는 3회"
+                }
+            ]
+        },
+        {
+            "id": "mmr",
+            "name": "MMR (홍역/유행성이하선염/풍진)",
+            "type": "국가필수",
+            "description": "홍역, 유행성이하선염, 풍진 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 12,
+                    "ageLabel": "생후 12~15개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 48,
+                    "ageLabel": "만 4~6세"
+                }
+            ]
+        },
+        {
+            "id": "var",
+            "name": "VAR (수두)",
+            "type": "국가필수",
+            "description": "수두 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 12,
+                    "ageLabel": "생후 12~15개월"
+                }
+            ]
+        },
+        {
+            "id": "hepa",
+            "name": "HepA (A형 간염)",
+            "type": "국가필수",
+            "description": "A형 간염 예방",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 12,
+                    "ageLabel": "생후 12~23개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 18,
+                    "ageLabel": "1차 접종 후 6~12개월 뒤"
+                }
+            ]
+        },
+        {
+            "id": "je_inactivated",
+            "name": "일본뇌염 (사백신)",
+            "type": "국가필수",
+            "description": "일본뇌염 예방 (불활성화 백신)",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 12,
+                    "ageLabel": "생후 12~23개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 13,
+                    "ageLabel": "1차 후 7~30일"
+                },
+                {
+                    "dose": 3,
+                    "ageMonths": 24,
+                    "ageLabel": "2차 후 12개월"
+                },
+                {
+                    "dose": 4,
+                    "ageMonths": 72,
+                    "ageLabel": "만 6세"
+                },
+                {
+                    "dose": 5,
+                    "ageMonths": 144,
+                    "ageLabel": "만 12세"
+                }
+            ]
+        },
+        {
+            "id": "je_live",
+            "name": "일본뇌염 (생백신)",
+            "type": "국가필수",
+            "description": "일본뇌염 예방 (약독화 생백신)",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 12,
+                    "ageLabel": "생후 12~23개월"
+                },
+                {
+                    "dose": 2,
+                    "ageMonths": 24,
+                    "ageLabel": "1차 후 12개월"
+                }
+            ]
+        },
+        {
+            "id": "influenza",
+            "name": "인플루엔자",
+            "type": "국가필수",
+            "description": "독감 예방 (매년 접종)",
+            "schedule": [
+                {
+                    "dose": 1,
+                    "ageMonths": 6,
+                    "ageLabel": "생후 6개월~만 13세",
+                    "note": "매년 접종 (9~12월 권장)"
+                }
+            ]
+        }
+    ]
+}
