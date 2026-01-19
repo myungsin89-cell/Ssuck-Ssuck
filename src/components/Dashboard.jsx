@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DataService from '../services/DataService';
+import AppInstallButton from './AppInstallButton';
 
 const Dashboard = ({ childrenList = [], onSelect, onAddChild, onDeleteChild, onLogout, onRefresh }) => {
     const [isJoining, setIsJoining] = useState(false);
