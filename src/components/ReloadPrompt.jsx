@@ -62,7 +62,7 @@ function ReloadPrompt() {
                     onClick={() => updateServiceWorker(true)}
                     style={{
                         padding: '6px 12px',
-                        backgroundColor: '#4CAF50',
+                        backgroundColor: 'var(--primary-color)',
                         border: 'none',
                         color: 'white',
                         borderRadius: '4px',

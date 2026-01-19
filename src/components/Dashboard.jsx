@@ -50,7 +50,7 @@ const Dashboard = ({ childrenList = [], onSelect, onAddChild, onDeleteChild, onL
         <div style={{
             height: '100vh',
             padding: '40px 20px',
-            backgroundColor: '#f8f9fa',
+            backgroundColor: 'var(--background-color)',
             overflowY: 'auto'
         }}>
             <header style={{ marginBottom: '40px', textAlign: 'center' }}>

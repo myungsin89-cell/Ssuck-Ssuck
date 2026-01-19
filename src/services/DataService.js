@@ -685,17 +685,17 @@ class DataService {
             localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(filteredLogs));
 
             // 4. 성장 기록 삭제
-            const allGrowth = JSON.parse(localStorage.getItem(STORAGE_KEYS.GROWTH) || '{}');
+            const allGrowth = JSON.parse(localStorage.getItem(STORAGE_KEYS.GROWTH) || '{ }');
             delete allGrowth[childId];
             localStorage.setItem(STORAGE_KEYS.GROWTH, JSON.stringify(allGrowth));
 
             // 5. 예방접종 기록 삭제
-            const allVaccination = JSON.parse(localStorage.getItem(STORAGE_KEYS.VACCINATION) || '{}');
+            const allVaccination = JSON.parse(localStorage.getItem(STORAGE_KEYS.VACCINATION) || '{ }');
             delete allVaccination[childId];
             localStorage.setItem(STORAGE_KEYS.VACCINATION, JSON.stringify(allVaccination));
 
             // 6. 체크리스트 삭제
-            const allChecklist = JSON.parse(localStorage.getItem(STORAGE_KEYS.CHECKLIST) || '{}');
+            const allChecklist = JSON.parse(localStorage.getItem(STORAGE_KEYS.CHECKLIST) || '{ }');
             delete allChecklist[childId];
             localStorage.setItem(STORAGE_KEYS.CHECKLIST, JSON.stringify(allChecklist));
 
@@ -708,7 +708,7 @@ class DataService {
             }
 
             // 8. 건강 기록 삭제 (알레르기, 질병 이력, 영양제 등)
-            const allHealthRecords = JSON.parse(localStorage.getItem(STORAGE_KEYS.HEALTH_RECORDS) || '{}');
+            const allHealthRecords = JSON.parse(localStorage.getItem(STORAGE_KEYS.HEALTH_RECORDS) || '{ }');
             delete allHealthRecords[childId];
             localStorage.setItem(STORAGE_KEYS.HEALTH_RECORDS, JSON.stringify(allHealthRecords));
 

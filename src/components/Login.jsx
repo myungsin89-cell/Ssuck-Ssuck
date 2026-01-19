@@ -90,8 +90,8 @@ const Login = ({ onLogin }) => {
             justifyContent: 'center',
             alignItems: 'center',
             padding: '40px',
-            backgroundColor: '#ffffff',
-            backgroundImage: 'radial-gradient(#FFF9C4 0.5px, #ffffff 0.5px)',
+            backgroundColor: 'var(--background-color)',
+            backgroundImage: 'radial-gradient(#FFF9C4 0.5px, var(--background-color) 0.5px)',
             backgroundSize: '20px 20px'
         }}>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
