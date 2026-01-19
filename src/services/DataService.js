@@ -38,17 +38,8 @@ class DataService {
         const validDirectChildren = directChildrenIds.filter(id => allChildren[id]);
         const validSharedChildren = sharedChildrenIds.filter(id => allChildren[id]);
 
-        // 만약 유효한 연결이 하나도 없는데, 전체 데이터에는 아이가 존재한다면?
-        // (데이터 꼬임 현상: 매핑 정보가 유실되었거나 잘못된 경우)
-        if (validDirectChildren.length === 0 && validSharedChildren.length === 0) {
-            const allChildIds = Object.keys(allChildren);
-            if (allChildIds.length > 0) {
-                console.warn('DataService: No valid user mapping found, but children data exists. Falling back to all children.');
-                console.log('DataService: Recovered IDs:', allChildIds);
-                // 로컬 환경이므로 내 기기에 있는 모든 아이를 내 아이로 간주하고 복구
-                return allChildIds;
-            }
-        }
+        // 필터링만 수행
+
 
         // 중복 제거 및 반환
         const result = [...new Set([...directChildrenIds, ...sharedChildrenIds])];
