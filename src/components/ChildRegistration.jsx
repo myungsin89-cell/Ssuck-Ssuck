@@ -4,7 +4,7 @@ import ImageCropper from './ImageCropper';
 
 const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null, onLogout }) => {
     const [name, setName] = useState('');
-    const [gender, setGender] = useState('male'); // 기본값: 남자아이
+    const [gender, setGender] = useState(''); // 필수 선택 항목
     const [birthDate, setBirthDate] = useState('');
     const [photoUrl, setPhotoUrl] = useState('');
     const [isProcessing, setIsProcessing] = useState(false);
@@ -23,7 +23,7 @@ const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null,
             setPhotoUrl(initialData.photoUrl || '');
         } else {
             setName('');
-            setGender('male');
+            setGender('');
             setBirthDate('');
             setPhotoUrl('');
         }
@@ -55,8 +55,8 @@ const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null,
         }
 
         // 새로운 아이 등록
-        if (!name.trim() || !birthDate) {
-            setError('이름과 생년월일을 모두 입력해주세요.');
+        if (!name.trim() || !gender || !birthDate) {
+            setError('이름, 성별, 생년월일을 모두 입력해주세요.');
             return;
         }
 
@@ -231,7 +231,9 @@ const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null,
                 </div>
 
                 <div style={{ marginBottom: '20px' }}>
-                    <label style={{ display: 'block', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold', color: '#555' }}>성별</label>
+                    <label style={{ display: 'block', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold', color: '#555' }}>
+                        성별 <span style={{ color: '#E53E3E', marginLeft: '4px' }}>*</span>
+                    </label>
                     <div style={{ display: 'flex', gap: '10px' }}>
                         <button
                             onClick={() => setGender('male')}
