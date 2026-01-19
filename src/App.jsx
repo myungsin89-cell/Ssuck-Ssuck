@@ -114,7 +114,8 @@ function App() {
   }, []);
 
   const handleLoginSuccess = (user) => {
-    DataService.setLoggedIn(user);
+    // 이미 Login 컴포넌트에서 setCurrentUser를 호출했으므로 여기서는 생략 가능하거나
+    // DataService.setCurrentUser(user.id, user.nickname); 처럼 써야 함. 중복이므로 제거.
 
     // 사용자가 접근 가능한 아이 목록 로드
     const childList = DataService.getChildren(user.id);
