@@ -141,9 +141,9 @@ class FirestoreService {
     async getLogs(childId) {
         const uid = this.getUserId();
         const logsRef = collection(db, 'users', uid, 'logs');
-        let q;
         if (childId) {
-            q = query(logsRef, where('childId', '==', childId), orderBy('id', 'desc'));
+            // 인덱스 생성 없이 조회하기 위해 orderBy 제거 (메모리에서 정렬)
+            q = query(logsRef, where('childId', '==', childId));
         } else {
             q = query(logsRef, orderBy('id', 'desc'));
         }
@@ -153,6 +153,14 @@ class FirestoreService {
         querySnapshot.forEach((doc) => {
             logs.push(doc.data());
         });
+
+        // 메모리 상에서 최신순 정렬 (ID가 타임스탬프 기반이라고 가정)
+        logs.sort((a, b) => {
+            if (a.id > b.id) return -1;
+            if (a.id < b.id) return 1;
+            return 0;
+        });
+
         return logs;
     }
 
