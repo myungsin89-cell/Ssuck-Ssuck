@@ -96,21 +96,10 @@ const Login = ({ onLogin }) => {
         }}>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                 <div style={{
+                    fontSize: '5rem',
                     marginBottom: '20px',
-                    display: 'flex',
-                    justifyContent: 'center'
-                }}>
-                    <img
-                        src="/icon-512.png"
-                        alt="쑥쑥일기 로고"
-                        style={{
-                            width: '120px',
-                            height: '120px',
-                            objectFit: 'contain',
-                            animation: 'bounce 2s infinite'
-                        }}
-                    />
-                </div>
+                    animation: 'bounce 2s infinite'
+                }}>🌱</div>
                 <h1 style={{
                     fontSize: '2.5rem',
                     fontWeight: 'bold',
