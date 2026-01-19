@@ -16,7 +16,12 @@ const GrowthTracker = ({ childId, child: childProp }) => {
         // Use the child prop passed from parent
         if (childProp) {
             console.log('✅ Using childProp:', childProp);
-            setChild(childProp);
+            // gender 필드가 없는 기존 데이터를 위한 기본값 적용
+            const enrichedChild = {
+                ...childProp,
+                gender: childProp.gender || 'male'
+            };
+            setChild(enrichedChild);
             const savedHistory = DataService.getGrowthHistory(childId || childProp.id);
             console.log('📊 Growth history loaded:', savedHistory.length, 'entries');
             setHistory(savedHistory);
@@ -26,7 +31,12 @@ const GrowthTracker = ({ childId, child: childProp }) => {
             const currentChild = DataService.getChildInfo(childId);
             if (currentChild) {
                 console.log('📥 Fetched from DataService:', currentChild);
-                setChild(currentChild);
+                // gender 필드가 없는 기존 데이터를 위한 기본값 적용
+                const enrichedChild = {
+                    ...currentChild,
+                    gender: currentChild.gender || 'male'
+                };
+                setChild(enrichedChild);
                 const savedHistory = DataService.getGrowthHistory(childId || currentChild.id);
                 console.log('📊 Growth history loaded:', savedHistory.length, 'entries');
                 setHistory(savedHistory);

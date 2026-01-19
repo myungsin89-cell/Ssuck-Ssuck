@@ -27,9 +27,16 @@ const ParentingChat = ({ childId, child: childProp }) => {
             }
 
             if (!currentChild) {
-                console.log('❌ No child data available');
+                console.log('❌ No child data available - showing default welcome');
                 setContextData(null);
-                setMessages([]);
+                // 아이 데이터가 없어도 기본 환영 메시지 표시
+                const defaultWelcome = {
+                    id: 'welcome',
+                    text: `안녕하세요! 🧚 쑥쑥 선생님이에요. 궁금한 점 편하게 물어보세요! 😊`,
+                    sender: 'ai',
+                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                };
+                setMessages([defaultWelcome]);
                 return;
             }
 
@@ -55,9 +62,10 @@ const ParentingChat = ({ childId, child: childProp }) => {
                 ageLabel = `${months}개월`;
             }
 
-            // child 객체에 월령 정보 추가
+            // child 객체에 월령 정보 및 성별 기본값 추가
             const enrichedChild = {
                 ...currentChild,
+                gender: currentChild.gender || 'male',  // 성별 기본값
                 ageMonths,
                 ageLabel
             };

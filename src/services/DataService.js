@@ -375,7 +375,27 @@ class DataService {
     // --- Growth ---
     getGrowthHistory(childId) {
         const data = localStorage.getItem(STORAGE_KEYS.GROWTH);
-        const allHistory = data ? JSON.parse(data) : [];
+        let allHistory = [];
+
+        if (data) {
+            try {
+                const parsed = JSON.parse(data);
+                // 데이터가 배열인지 확인하고, 아니면 빈 배열로 초기화
+                if (Array.isArray(parsed)) {
+                    allHistory = parsed;
+                } else {
+                    // 객체 형식이면 배열로 변환 시도 후 저장
+                    console.warn('Growth data was not an array, resetting to empty array');
+                    localStorage.setItem(STORAGE_KEYS.GROWTH, '[]');
+                    allHistory = [];
+                }
+            } catch (e) {
+                console.error('Error parsing growth data:', e);
+                localStorage.setItem(STORAGE_KEYS.GROWTH, '[]');
+                allHistory = [];
+            }
+        }
+
         const sid = childId || this.getSelectedChildId();
         if (!sid) return [];
         return allHistory.filter(h => String(h.childId) === String(sid));
