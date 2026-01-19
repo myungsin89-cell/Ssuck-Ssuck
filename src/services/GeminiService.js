@@ -1,7 +1,16 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(API_KEY);
+
+// API 키가 없어도 앱이 터지지 않도록 처리
+let genAI = null;
+if (API_KEY) {
+    try {
+        genAI = new GoogleGenerativeAI(API_KEY);
+    } catch (e) {
+        console.error("Gemini AI Init Failed:", e);
+    }
+}
 
 const SYSTEM_INSTRUCTION = `
 ## 역할(Role)
@@ -22,21 +31,37 @@ const SYSTEM_INSTRUCTION = `
 
 class GeminiService {
     constructor() {
-        this.model = genAI.getGenerativeModel({
-            model: "gemini-2.0-flash",
-            systemInstruction: SYSTEM_INSTRUCTION
-        });
+        this.model = null;
+        if (genAI) {
+            try {
+                this.model = genAI.getGenerativeModel({
+                    model: "gemini-2.0-flash",
+                    systemInstruction: SYSTEM_INSTRUCTION
+                });
+            } catch (error) {
+                console.error("Model Init Failed:", error);
+            }
+        }
         this.chat = null;
     }
 
     async startChat(history = []) {
-        this.chat = this.model.startChat({
-            history: history,
-            generationConfig: {
-                maxOutputTokens: 1000,
-                temperature: 0.7, // 약간의 창의성 부여
-            },
-        });
+        if (!this.model) {
+            console.warn("Gemini Model is not initialized (Missing API Key?)");
+            return;
+        }
+        try {
+            this.chat = this.model.startChat({
+                history: history,
+                generationConfig: {
+                    maxOutputTokens: 1000,
+                    temperature: 0.7,
+                },
+            });
+        } catch (error) {
+            console.error("Chat Start Failed:", error);
+            this.chat = null;
+        }
     }
 
     async sendMessage(message, contextData = null) {

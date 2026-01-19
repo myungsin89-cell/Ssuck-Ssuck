@@ -347,13 +347,13 @@ function App() {
           />
         )}
         {activeTab === 'growth' && (
-          <GrowthTracker childId={childInfo.id} child={childInfo} />
+          <GrowthTracker childId={childInfo?.id} child={childInfo} />
         )}
         {activeTab === 'health' && (
-          <HealthRecords childId={childInfo.id} child={childInfo} />
+          <HealthRecords childId={childInfo?.id} child={childInfo} />
         )}
         {activeTab === 'chat' && (
-          <ParentingChat childId={childInfo.id} child={childInfo} />
+          <ParentingChat childId={childInfo?.id} child={childInfo} />
         )}
       </main>
 
