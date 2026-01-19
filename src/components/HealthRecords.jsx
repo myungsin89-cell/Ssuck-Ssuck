@@ -153,7 +153,19 @@ const HealthRecords = ({ childId, child }) => {
                     <HealthDashboard childId={childId} child={child} onNavigate={setActiveCategory} />
                 )}
                 {activeCategory === 'vaccination' && (
-                    <VaccinationTracker childId={childId} child={child} />
+                    <VaccinationTracker
+                        childId={childId}
+                        child={child}
+                        currentAgeMonths={child ? (() => {
+                            const birthDate = new Date(child.birthDate);
+                            const today = new Date();
+                            let months = (today.getFullYear() - birthDate.getFullYear()) * 12;
+                            months -= birthDate.getMonth();
+                            months += today.getMonth();
+                            if (today.getDate() < birthDate.getDate()) months--;
+                            return Math.max(0, months);
+                        })() : 0}
+                    />
                 )}
                 {activeCategory === 'allergies' && (
                     <AllergyManager childId={childId} />

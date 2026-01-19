@@ -4,7 +4,7 @@ import DataService from '../services/DataService';
 import MilestoneService from '../services/MilestoneService';
 import ProgressService from '../services/ProgressService';
 
-const ParentingChat = ({ childId }) => {
+const ParentingChat = ({ childId, child: childProp }) => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -16,8 +16,13 @@ const ParentingChat = ({ childId }) => {
     }, [childId]);
 
     const loadContextData = async () => {
-        // 현재 선택된 아이 정보 가져오기
-        const currentChild = DataService.getChildInfo();
+        // Use the child prop passed from parent
+        let currentChild = childProp;
+
+        if (!currentChild) {
+            // Fallback: try to get from DataService
+            currentChild = DataService.getChildInfo(childId);
+        }
 
         if (!currentChild) {
             setContextData(null);

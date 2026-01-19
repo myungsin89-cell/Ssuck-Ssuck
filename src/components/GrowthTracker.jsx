@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import GrowthService from '../services/GrowthService';
 import DataService from '../services/DataService';
 
-const GrowthTracker = ({ childId }) => {
+const GrowthTracker = ({ childId, child: childProp }) => {
     const [child, setChild] = useState(null);
     const [history, setHistory] = useState([]);
     const [height, setHeight] = useState('');
@@ -11,14 +11,21 @@ const GrowthTracker = ({ childId }) => {
     const [activeType, setActiveType] = useState('HEIGHT'); // HEIGHT or WEIGHT
 
     useEffect(() => {
-        const currentChild = DataService.getChildInfo();
-        setChild(currentChild);
-
-        if (currentChild) {
-            const savedHistory = DataService.getGrowthHistory(childId || currentChild.id);
+        // Use the child prop passed from parent
+        if (childProp) {
+            setChild(childProp);
+            const savedHistory = DataService.getGrowthHistory(childId || childProp.id);
             setHistory(savedHistory);
+        } else {
+            // Fallback: try to get from DataService
+            const currentChild = DataService.getChildInfo(childId);
+            if (currentChild) {
+                setChild(currentChild);
+                const savedHistory = DataService.getGrowthHistory(childId || currentChild.id);
+                setHistory(savedHistory);
+            }
         }
-    }, [childId]);
+    }, [childId, childProp]);
 
     const handleSave = async () => {
         if (!height && !weight) return;
@@ -98,6 +105,15 @@ const GrowthTracker = ({ childId }) => {
     const currentStandards = child && currentStats ? GrowthService.getStandardValues(child.gender || 'male', currentStats.months, activeType) : null;
     const currentVal = currentStats ? (activeType === 'HEIGHT' ? currentStats.height : currentStats.weight) : null;
     const percentile = currentVal && currentStandards ? GrowthService.calculatePercentile(currentVal, currentStandards) : '-';
+
+    // Safety check: don't render if child data is not available
+    if (!child) {
+        return (
+            <div style={{ padding: '20px', textAlign: 'center' }}>
+                <p style={{ color: '#999' }}>아이 정보를 불러오는 중...</p>
+            </div>
+        );
+    }
 
     return (
         <div style={{ padding: '10px' }}>

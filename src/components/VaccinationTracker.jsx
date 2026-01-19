@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import vaccinationsData from '../data/vaccinations_ko.json';
 import DataService from '../services/DataService';
 
-const VaccinationTracker = ({ childId, currentAgeMonths }) => {
+const VaccinationTracker = ({ childId, currentAgeMonths, child: childProp }) => {
     const [child, setChild] = useState(null);
     const [vaccinationRecords, setVaccinationRecords] = useState({});
     const [upcomingVaccinations, setUpcomingVaccinations] = useState([]);
@@ -10,8 +10,14 @@ const VaccinationTracker = ({ childId, currentAgeMonths }) => {
     const [expandedSections, setExpandedSections] = useState({});
 
     useEffect(() => {
-        const currentChild = DataService.getChildInfo();
-        setChild(currentChild);
+        // Use the child prop passed from parent
+        if (childProp) {
+            setChild(childProp);
+        } else {
+            // Fallback: try to get from DataService
+            const currentChild = DataService.getChildInfo(childId);
+            setChild(currentChild);
+        }
 
         // 접종 기록 불러오기
         const records = DataService.getVaccinationRecords(childId);
@@ -39,7 +45,7 @@ const VaccinationTracker = ({ childId, currentAgeMonths }) => {
             return !isCompleted && item.ageMonths >= currentAgeMonths && item.ageMonths <= currentAgeMonths + 3;
         });
         setUpcomingVaccinations(upcoming);
-    }, [childId, currentAgeMonths]);
+    }, [childId, currentAgeMonths, childProp]);
 
     const handleToggle = async (vaccineId, dose) => {
         const key = `${vaccineId}_${dose}`;
