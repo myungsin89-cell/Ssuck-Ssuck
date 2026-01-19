@@ -18,7 +18,7 @@ const FamilySettings = ({ child, isOpen, onClose, onLogout }) => {
     const handleCopyCode = async () => {
         if (!familyGroup?.inviteCode) return;
 
-        const inviteUrl = `${window.location.origin}?invite=${familyGroup.inviteCode}`;
+        const inviteUrl = `https://ssuck-ssuck.vercel.app/?invite=${familyGroup.inviteCode}`;
         const inviteText = `[쑥쑥일기] ${child.name}의 육아 일기에 초대합니다! 👶\n\n👇 아래 링크를 누르면 바로 연결됩니다:\n${inviteUrl}\n\n(초대 코드: ${familyGroup.inviteCode})`;
 
         try {
@@ -41,7 +41,7 @@ const FamilySettings = ({ child, isOpen, onClose, onLogout }) => {
     const handleShare = async () => {
         if (!familyGroup?.inviteCode) return;
 
-        const inviteUrl = `${window.location.origin}?invite=${familyGroup.inviteCode}`;
+        const inviteUrl = `https://ssuck-ssuck.vercel.app/?invite=${familyGroup.inviteCode}`;
         const inviteText = `[쑥쑥일기] ${child.name}의 육아 일기에 초대합니다! 👶\n\n👇 아래 링크를 누르면 바로 연결됩니다:\n${inviteUrl}\n\n(초대 코드: ${familyGroup.inviteCode})`;
 
         if (navigator.share) {
