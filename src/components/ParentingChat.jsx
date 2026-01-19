@@ -13,7 +13,7 @@ const ParentingChat = ({ childId, child: childProp }) => {
 
     useEffect(() => {
         loadContextData();
-    }, [childId]);
+    }, [childId, childProp]);
 
     const loadContextData = async () => {
         // Use the child prop passed from parent
