@@ -108,6 +108,9 @@ class DataService {
         }
         localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
 
+        // Firestore에 사용자-아이 연결 저장
+        FirestoreService.saveUserChildren(currentUser, userChildren[currentUser]).catch(err => console.error('Cloud user-children mapping save failed:', err));
+
         // 3. 선택된 아이로 설정
         localStorage.setItem(STORAGE_KEYS.SELECTED_CHILD_ID, String(childInfo.id));
 
@@ -445,6 +448,9 @@ class DataService {
 
         localStorage.setItem(STORAGE_KEYS.VACCINATION, JSON.stringify(allRecords));
 
+        //Firestore sync
+        FirestoreService.saveVaccinationRecords(sid, allRecords[sid]).catch(err => console.error('Cloud vaccination save failed:', err));
+
         return allRecords[sid];
     }
     // --- Family Groups ---
@@ -483,8 +489,8 @@ class DataService {
         allGroups[familyGroupId] = familyGroup;
         localStorage.setItem(STORAGE_KEYS.FAMILY_GROUPS, JSON.stringify(allGroups));
 
-        // Firestore에도 저장 (추후 구현)
-        // FirestoreService.saveFamilyGroup(familyGroup);
+        // Firestore에 저장
+        FirestoreService.saveFamilyGroup(familyGroup).catch(err => console.error('Cloud family group save failed:', err));
 
         return familyGroup;
     }
@@ -529,6 +535,9 @@ class DataService {
             const allGroups = this.getAllFamilyGroups();
             allGroups[familyGroup.familyGroupId] = familyGroup;
             localStorage.setItem(STORAGE_KEYS.FAMILY_GROUPS, JSON.stringify(allGroups));
+
+            // Firestore 동기화
+            FirestoreService.saveFamilyGroup(familyGroup).catch(err => console.error('Cloud family group update failed:', err));
         }
 
         // 2. [CRITICAL] 사용자-아이 연결 (내 목록에 추가)
@@ -539,6 +548,9 @@ class DataService {
         if (!userChildren[userId].includes(String(familyGroup.childId))) {
             userChildren[userId].push(String(familyGroup.childId));
             localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
+
+            // Firestore에 사용자-아이 연결 저장
+            FirestoreService.saveUserChildren(userId, userChildren[userId]).catch(err => console.error('Cloud user-children mapping save failed:', err));
         }
 
         return familyGroup;
@@ -554,11 +566,23 @@ class DataService {
     }
 
     // --- User Authentication ---
-    registerUser(userId, password, name) {
+    async registerUser(userId, password, name) {
+        // 1. Firestore에 먼저 등록 시도 (중복 확인)
+        const firestoreResult = await FirestoreService.registerUser(userId, password, name);
+
+        if (!firestoreResult.success) {
+            if (firestoreResult.error === 'USER_EXISTS') {
+                return false; // 이미 존재하는 아이디
+            }
+            // Firestore 오류 시에도 로컬에는 저장
+            console.warn('Firestore registration failed, saving locally only');
+        }
+
+        // 2. 로컬 저장소에도 저장 (오프라인 대응)
         const data = localStorage.getItem(STORAGE_KEYS.USERS);
         const users = data ? JSON.parse(data) : {};
 
-        // 이미 존재하는 아이디인지 확인
+        // 이미 존재하는 아이디인지 확인 (로컬)
         if (users[userId]) {
             return false;
         }
@@ -570,12 +594,33 @@ class DataService {
             name,
             createdAt: new Date().toISOString()
         };
-
         localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
         return true;
     }
 
-    authenticateUser(userId, password) {
+    async authenticateUser(userId, password) {
+        // 1. Firestore에서 먼저 확인 (클라우드 우선)
+        try {
+            const firestoreUser = await FirestoreService.authenticateUser(userId, password);
+
+            if (firestoreUser) {
+                // Firestore 인증 성공 → 로컬에도 동기화
+                const data = localStorage.getItem(STORAGE_KEYS.USERS);
+                const users = data ? JSON.parse(data) : {};
+                users[userId] = {
+                    userId: firestoreUser.userId,
+                    password,
+                    name: firestoreUser.name,
+                    createdAt: firestoreUser.createdAt
+                };
+                localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
+                return firestoreUser;
+            }
+        } catch (error) {
+            console.warn('Firestore authentication failed, trying localStorage:', error);
+        }
+
+        // 2. Firestore 실패 시 로컬 저장소에서 확인 (오프라인 대응)
         const data = localStorage.getItem(STORAGE_KEYS.USERS);
         const users = data ? JSON.parse(data) : {};
 
@@ -696,6 +741,9 @@ class DataService {
 
         allRecords[childId].push(newRecord);
         localStorage.setItem(STORAGE_KEYS.HEALTH_RECORDS, JSON.stringify(allRecords));
+
+        // Firestore 동기화
+        FirestoreService.saveHealthRecords(childId, allRecords[childId]).catch(err => console.error('Cloud health records save failed:', err));
 
         return newRecord;
     }

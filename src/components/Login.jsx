@@ -11,28 +11,39 @@ const Login = ({ onLogin }) => {
     const [name, setName] = useState('');
 
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         if (!userId.trim() || !password.trim()) {
             setError('아이디와 비밀번호를 입력해주세요.');
             return;
         }
 
-        // 사용자 인증
-        const user = DataService.authenticateUser(userId, password);
+        setIsLoading(true);
+        setError('');
 
-        if (!user) {
-            setError('아이디 또는 비밀번호가 일치하지 않습니다.');
-            return;
+        try {
+            // 사용자 인증 (Firestore + localStorage)
+            const user = await DataService.authenticateUser(userId, password);
+
+            if (!user) {
+                setError('아이디 또는 비밀번호가 일치하지 않습니다.');
+                setIsLoading(false);
+                return;
+            }
+
+            // 현재 사용자 정보 저장
+            DataService.setCurrentUser(user.userId, user.name);
+
+            onLogin({ id: user.userId, nickname: user.name });
+        } catch (error) {
+            console.error('Login error:', error);
+            setError('로그인 중 오류가 발생했습니다.');
+            setIsLoading(false);
         }
-
-        // 현재 사용자 정보 저장
-        DataService.setCurrentUser(user.userId, user.name);
-
-        onLogin({ id: user.userId, nickname: user.name });
     };
 
-    const handleSignUp = () => {
+    const handleSignUp = async () => {
         if (!userId.trim() || !password.trim() || !name.trim()) {
             setError('모든 필드를 입력해주세요.');
             return;
@@ -48,17 +59,27 @@ const Login = ({ onLogin }) => {
             return;
         }
 
-        // 사용자 등록
-        const success = DataService.registerUser(userId, password, name);
+        setIsLoading(true);
+        setError('');
 
-        if (!success) {
-            setError('이미 존재하는 아이디입니다.');
-            return;
+        try {
+            // 사용자 등록 (Firestore + localStorage)
+            const success = await DataService.registerUser(userId, password, name);
+
+            if (!success) {
+                setError('이미 존재하는 아이디입니다.');
+                setIsLoading(false);
+                return;
+            }
+
+            // 자동 로그인
+            DataService.setCurrentUser(userId, name);
+            onLogin({ id: userId, nickname: name });
+        } catch (error) {
+            console.error('SignUp error:', error);
+            setError('회원가입 중 오류가 발생했습니다.');
+            setIsLoading(false);
         }
-
-        // 자동 로그인
-        DataService.setCurrentUser(userId, name);
-        onLogin({ id: userId, nickname: name });
     };
 
     return (
@@ -263,23 +284,24 @@ const Login = ({ onLogin }) => {
                 {/* 로그인/회원가입 버튼 */}
                 <button
                     onClick={isSignUp ? handleSignUp : handleLogin}
+                    disabled={isLoading}
                     style={{
                         width: '100%',
                         padding: '14px',
-                        backgroundColor: 'var(--primary-color)',
+                        backgroundColor: isLoading ? '#ccc' : 'var(--primary-color)',
                         color: 'white',
                         border: 'none',
                         borderRadius: '8px',
                         fontSize: '1.1rem',
                         fontWeight: 'bold',
-                        cursor: 'pointer',
+                        cursor: isLoading ? 'not-allowed' : 'pointer',
                         marginBottom: '12px',
                         transition: 'opacity 0.2s'
                     }}
-                    onMouseEnter={(e) => e.target.style.opacity = '0.9'}
-                    onMouseLeave={(e) => e.target.style.opacity = '1'}
+                    onMouseEnter={(e) => !isLoading && (e.target.style.opacity = '0.9')}
+                    onMouseLeave={(e) => !isLoading && (e.target.style.opacity = '1')}
                 >
-                    {isSignUp ? '회원가입' : '로그인'}
+                    {isLoading ? '처리 중...' : (isSignUp ? '회원가입' : '로그인')}
                 </button>
 
                 {/* 전환 버튼 */}
