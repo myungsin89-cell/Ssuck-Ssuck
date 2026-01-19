@@ -580,9 +580,8 @@ class DataService {
         const users = data ? JSON.parse(data) : {};
 
         const user = users[userId];
-        // [Hotfix] 개발 편의 및 로그인 오류 해결을 위해 비밀번호 검사 임시 해제
-        // if (!user || user.password !== password) {
-        if (!user) {
+
+        if (!user || user.password !== password) {
             return null;
         }
 
