@@ -4,6 +4,7 @@ import ImageCropper from './ImageCropper';
 
 const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null, onLogout }) => {
     const [name, setName] = useState('');
+    const [gender, setGender] = useState('male'); // 기본값: 남자아이
     const [birthDate, setBirthDate] = useState('');
     const [photoUrl, setPhotoUrl] = useState('');
     const [isProcessing, setIsProcessing] = useState(false);
@@ -17,10 +18,12 @@ const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null,
     useEffect(() => {
         if (initialData) {
             setName(initialData.name || '');
+            setGender(initialData.gender || 'male');
             setBirthDate(initialData.birthDate || '');
             setPhotoUrl(initialData.photoUrl || '');
         } else {
             setName('');
+            setGender('male');
             setBirthDate('');
             setPhotoUrl('');
         }
@@ -61,6 +64,7 @@ const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null,
         const updatedInfo = {
             id: childId,
             name,
+            gender,
             birthDate,
             photoUrl: photoUrl || 'https://api.dicebear.com/7.x/miniavs/svg?seed=baby'
         };
@@ -224,6 +228,46 @@ const ChildRegistration = ({ onSave, onClose, isOpen = true, initialData = null,
                             fontSize: '1rem'
                         }}
                     />
+                </div>
+
+                <div style={{ marginBottom: '20px' }}>
+                    <label style={{ display: 'block', marginBottom: '10px', fontSize: '0.9rem', fontWeight: 'bold', color: '#555' }}>성별</label>
+                    <div style={{ display: 'flex', gap: '10px' }}>
+                        <button
+                            onClick={() => setGender('male')}
+                            style={{
+                                flex: 1,
+                                padding: '12px',
+                                borderRadius: '12px',
+                                border: `2px solid ${gender === 'male' ? '#4dabf7' : '#eee'}`,
+                                backgroundColor: gender === 'male' ? '#e7f5ff' : 'white',
+                                color: gender === 'male' ? '#1971c2' : '#888',
+                                fontWeight: 'bold',
+                                cursor: 'pointer',
+                                transition: 'all 0.2s'
+                            }}
+                        >
+                            <span style={{ fontSize: '1.2rem', marginRight: '5px' }}>♂</span>
+                            남자아이
+                        </button>
+                        <button
+                            onClick={() => setGender('female')}
+                            style={{
+                                flex: 1,
+                                padding: '12px',
+                                borderRadius: '12px',
+                                border: `2px solid ${gender === 'female' ? '#ff6b6b' : '#eee'}`,
+                                backgroundColor: gender === 'female' ? '#fff0f6' : 'white',
+                                color: gender === 'female' ? '#e03131' : '#888',
+                                fontWeight: 'bold',
+                                cursor: 'pointer',
+                                transition: 'all 0.2s'
+                            }}
+                        >
+                            <span style={{ fontSize: '1.2rem', marginRight: '5px' }}>♀</span>
+                            여자아이
+                        </button>
+                    </div>
                 </div>
 
                 <div style={{ marginBottom: '40px' }}>

@@ -105,6 +105,14 @@ const ChildProfile = ({ child, onAgeChange, onSwitchChild, onUpdateChild }) => {
                             color: 'var(--primary-dark)'
                         }}>
                             {child.name}
+                            <span style={{
+                                marginLeft: '6px',
+                                fontSize: '1.1rem',
+                                color: child.gender === 'female' ? '#e03131' : '#1971c2',
+                                verticalAlign: 'middle'
+                            }}>
+                                {child.gender === 'female' ? '♀' : '♂'}
+                            </span>
                         </h2>
                         <p style={{
                             color: 'var(--text-sub)',
