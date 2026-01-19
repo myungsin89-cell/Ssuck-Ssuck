@@ -42,10 +42,11 @@ class GeminiService {
     init() {
         if (genAI) {
             try {
-                this.model = genAI.getGenerativeModel({
-                    model: "gemini-1.5-flash",
-                    systemInstruction: SYSTEM_INSTRUCTION
-                });
+                // apiVersion을 'v1'으로 명시하여 404 에러 방지
+                this.model = genAI.getGenerativeModel(
+                    { model: "gemini-1.5-flash" },
+                    { apiVersion: 'v1', systemInstruction: SYSTEM_INSTRUCTION }
+                );
             } catch (error) {
                 console.error("Model Init Failed:", error);
             }
@@ -169,43 +170,42 @@ class GeminiService {
             return { isMatched: false };
         }
 
-        const prompt = `
-            당신은 세계 최고의 아동 발달 전문가입니다.
-            부모님이 작성한 '관찰 기록'을 분석하여, 제공된 '표준 발달 데이터' 중 가장 부합하는 항목을 딱 하나만 찾아주세요.
-            
-            [부모님의 관찰 기록]: "${logText}"
-            [아이 현재 월령]: ${currentAgeMonths}개월
-            [표준 발달 데이터]: ${JSON.stringify(milestones)}
-            
-            ## 핵심 분석 지침 (매우 중요):
-            1. **문장 구조 분석 우선**: 관찰 기록에서 아이가 '몇 단어를 조합해서 말했는지'를 가장 먼저 파악하세요.
-               - 예: "엄마 물 주세요"는 3단어 조합 문장입니다. 이 경우 '엄마'나 '물'이라는 개별 단어가 아니라 '3단어 조합 문장 사용'이라는 언어 발달 지표에 매칭해야 합니다.
-               - 예: "맘마"만 말했다면 1단어 발화(초기 언어)에 해당합니다.
-            2. **키워드 함정 회피**: 관찰 기록에 '엄마'가 포함되어 있다고 해서 '엄마'라는 키워드를 가진 항목에 매칭하지 마세요. 문맥상 아이가 '문장을 말할 수 있다'는 것이 핵심이라면 언어 발달 조합 항목에 매칭하세요.
-            3. **조기 발달 축하**: 아이의 현재 월령보다 높은 발달 항목에 매칭되어도 정확하다면 과감히 선택하고, 부모님께 아이의 빠른 성장을 축하해 주세요.
-            4. **따뜻한 코멘트**: 매칭된 경우 부모님께 드리는 전문가다운 따뜻한 칭찬과 분석 코멘트를 한 문장으로 작성하세요.
-            
-            반드시 다음 JSON 형식으로만 답변하세요 (다른 텍스트 금지):
-            {
-                "isMatched": true,
-                "matchedId": "항목 ID",
-                "categoryId": "카테고리 ID(social/language/cognitive/physical 중 하나)",
-                "matchedAge": 개월수(숫자),
-                "matchedAgeLabel": "연령 라벨(예: 24개월)",
-                "milestoneText": "발달 내용",
-                "comment": "칭찬과 분석 코멘트"
-            }
-            매칭되는 항목이 절대 없다고 판단되면 {"isMatched": false}만 반환하세요.
-        `;
-
         try {
-            // 분석 모델도 1.5 flash로 통일 (더 안정적임)
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+            // 분석 모델도 v1으로 안정화
+            const model = genAI.getGenerativeModel(
+                { model: "gemini-1.5-flash" },
+                { apiVersion: 'v1' }
+            );
+
+            const prompt = `
+                당신은 세계 최고의 아동 발달 전문가입니다.
+                부모님이 작성한 '관찰 기록'을 분석하여, 제공된 '표준 발달 데이터' 중 가장 부합하는 항목을 딱 하나만 찾아주세요.
+                
+                [부모님의 관찰 기록]: "${logText}"
+                [아이 현재 월령]: ${currentAgeMonths}개월
+                [표준 발달 데이터]: ${JSON.stringify(milestones)}
+                
+                ## 핵심 분석 지침 (매우 중요):
+                1. **문장 구조 분석 우선**: 관찰 기록에서 아이가 '몇 단어를 조합해서 말했는지'를 가장 먼저 파악하세요.
+                   - 예: "엄마 물 주세요"는 3단어 조합 문장입니다. 이 경우 '엄마'나 '물'이라는 개별 단어가 아니라 '3단어 조합 문장 사용'이라는 언어 발달 지표에 매칭해야 합니다.
+                2. **따뜻한 코멘트**: 매칭된 경우 부모님께 드리는 전문가다운 따뜻한 칭찬과 분석 코멘트를 한 문장으로 작성하세요.
+                
+                반드시 다음 JSON 형식으로만 답변하세요:
+                {
+                    "isMatched": true,
+                    "matchedId": "항목 ID",
+                    "categoryId": "카테고리 ID",
+                    "matchedAge": 개월수,
+                    "matchedAgeLabel": "연령 라벨",
+                    "milestoneText": "발달 내용",
+                    "comment": "칭찬 코멘트"
+                }
+            `;
+
             const result = await model.generateContent(prompt);
             const response = await result.response;
             const text = response.text();
 
-            // JSON 부분만 정밀 추출
             const jsonMatch = text.match(/\{[\s\S]*\}/s);
             if (!jsonMatch) return { isMatched: false };
 
