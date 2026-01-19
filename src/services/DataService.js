@@ -685,9 +685,9 @@ class DataService {
             localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(filteredLogs));
 
             // 4. 성장 기록 삭제
-            const allGrowth = JSON.parse(localStorage.getItem(STORAGE_KEYS.GROWTH) || '{ }');
-            delete allGrowth[childId];
-            localStorage.setItem(STORAGE_KEYS.GROWTH, JSON.stringify(allGrowth));
+            const allGrowth = JSON.parse(localStorage.getItem(STORAGE_KEYS.GROWTH) || '[]');
+            const filteredGrowth = allGrowth.filter(g => String(g.childId) !== String(childId));
+            localStorage.setItem(STORAGE_KEYS.GROWTH, JSON.stringify(filteredGrowth));
 
             // 5. 예방접종 기록 삭제
             const allVaccination = JSON.parse(localStorage.getItem(STORAGE_KEYS.VACCINATION) || '{ }');

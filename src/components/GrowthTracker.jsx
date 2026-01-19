@@ -11,18 +11,27 @@ const GrowthTracker = ({ childId, child: childProp }) => {
     const [activeType, setActiveType] = useState('HEIGHT'); // HEIGHT or WEIGHT
 
     useEffect(() => {
+        console.log('🔍 GrowthTracker useEffect called', { childId, childProp });
+
         // Use the child prop passed from parent
         if (childProp) {
+            console.log('✅ Using childProp:', childProp);
             setChild(childProp);
             const savedHistory = DataService.getGrowthHistory(childId || childProp.id);
+            console.log('📊 Growth history loaded:', savedHistory.length, 'entries');
             setHistory(savedHistory);
         } else {
+            console.log('⚠️ No childProp, trying DataService...');
             // Fallback: try to get from DataService
             const currentChild = DataService.getChildInfo(childId);
             if (currentChild) {
+                console.log('📥 Fetched from DataService:', currentChild);
                 setChild(currentChild);
                 const savedHistory = DataService.getGrowthHistory(childId || currentChild.id);
+                console.log('📊 Growth history loaded:', savedHistory.length, 'entries');
                 setHistory(savedHistory);
+            } else {
+                console.log('❌ No child data available from DataService');
             }
         }
     }, [childId, childProp]);

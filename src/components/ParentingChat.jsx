@@ -12,84 +12,92 @@ const ParentingChat = ({ childId, child: childProp }) => {
     const [contextData, setContextData] = useState(null);
 
     useEffect(() => {
-        loadContextData();
-    }, [childId, childProp]);
+        const loadContextData = async () => {
+            console.log('🔍 ParentingChat loadContextData called', { childId, childProp });
 
-    const loadContextData = async () => {
-        // Use the child prop passed from parent
-        let currentChild = childProp;
+            // Use the child prop passed from parent
+            let currentChild = childProp;
 
-        if (!currentChild) {
-            // Fallback: try to get from DataService
-            currentChild = DataService.getChildInfo(childId);
-        }
+            if (!currentChild) {
+                // Fallback: try to get from DataService
+                currentChild = DataService.getChildInfo(childId);
+                console.log('📥 Fetched from DataService:', currentChild);
+            } else {
+                console.log('✅ Using childProp:', currentChild);
+            }
 
-        if (!currentChild) {
-            setContextData(null);
-            return;
-        }
+            if (!currentChild) {
+                console.log('❌ No child data available');
+                setContextData(null);
+                setMessages([]);
+                return;
+            }
 
-        // 아이의 현재 월령 계산
-        const birthDate = new Date(currentChild.birthDate);
-        const today = new Date();
-        let ageMonths = (today.getFullYear() - birthDate.getFullYear()) * 12;
-        ageMonths -= birthDate.getMonth();
-        ageMonths += today.getMonth();
-        if (today.getDate() < birthDate.getDate()) {
-            ageMonths--;
-        }
-        ageMonths = Math.max(0, ageMonths);
+            // 아이의 현재 월령 계산
+            const birthDate = new Date(currentChild.birthDate);
+            const today = new Date();
+            let ageMonths = (today.getFullYear() - birthDate.getFullYear()) * 12;
+            ageMonths -= birthDate.getMonth();
+            ageMonths += today.getMonth();
+            if (today.getDate() < birthDate.getDate()) {
+                ageMonths--;
+            }
+            ageMonths = Math.max(0, ageMonths);
 
-        // 월령 라벨 생성
-        const years = Math.floor(ageMonths / 12);
-        const months = ageMonths % 12;
-        let ageLabel = '';
-        if (years > 0) {
-            ageLabel = `만 ${years}세`;
-            if (months > 0) ageLabel += ` ${months}개월`;
-        } else {
-            ageLabel = `${months}개월`;
-        }
+            // 월령 라벨 생성
+            const years = Math.floor(ageMonths / 12);
+            const months = ageMonths % 12;
+            let ageLabel = '';
+            if (years > 0) {
+                ageLabel = `만 ${years}세`;
+                if (months > 0) ageLabel += ` ${months}개월`;
+            } else {
+                ageLabel = `${months}개월`;
+            }
 
-        // child 객체에 월령 정보 추가
-        const enrichedChild = {
-            ...currentChild,
-            ageMonths,
-            ageLabel
-        };
+            // child 객체에 월령 정보 추가
+            const enrichedChild = {
+                ...currentChild,
+                ageMonths,
+                ageLabel
+            };
 
-        // 관찰 일기 (최근 5개)
-        const allLogs = DataService.getLogs(childId);
-        const recentLogs = allLogs.slice(0, 5);
+            // 관찰 일기 (최근 5개)
+            const allLogs = DataService.getLogs(childId);
+            const recentLogs = allLogs.slice(0, 5);
 
-        // 성장 기록 (최근 3개)
-        const growthHistory = DataService.getGrowthHistory(childId);
-        const recentGrowth = growthHistory.slice(-3);
+            // 성장 기록 (최근 3개)
+            const growthHistory = DataService.getGrowthHistory(childId);
+            const recentGrowth = growthHistory.slice(-3);
 
-        // 발달 정보 및 체크리스트 진행률
-        const milestones = await MilestoneService.getMilestonesByAge(ageMonths);
-        const checkedItems = DataService.getCheckedItems(childId);
-        const progress = ProgressService.calculateProgress(checkedItems, milestones);
+            // 발달 정보 및 체크리스트 진행률
+            const milestones = await MilestoneService.getMilestonesByAge(ageMonths);
+            const checkedItems = DataService.getCheckedItems(childId);
+            const progress = ProgressService.calculateProgress(checkedItems, milestones);
 
-        setContextData({
-            child: enrichedChild,
-            recentLogs,
-            recentGrowth,
-            milestones,
-            progress
-        });
+            setContextData({
+                child: enrichedChild,
+                recentLogs,
+                recentGrowth,
+                milestones,
+                progress
+            });
 
-        // 아이가 바뀌면 메시지 초기화 및 환영 인사
-        const childName = enrichedChild.name || '아이';
-        setMessages([
-            {
+            // 아이가 바뀌면 메시지 초기화 및 환영 인사
+            const childName = enrichedChild.name || '아이';
+            const welcomeMessage = {
                 id: 'welcome',
                 text: `안녕하세요! 🧚 ${childName}(${enrichedChild.ageLabel}) 담당 쑥쑥 선생님이에요. 궁금한 점 편하게 물어보세요! 😊`,
                 sender: 'ai',
                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-            }
-        ]);
-    };
+            };
+
+            console.log('💬 Setting welcome message:', welcomeMessage);
+            setMessages([welcomeMessage]);
+        };
+
+        loadContextData();
+    }, [childId, childProp]);
 
     useEffect(() => {
         scrollToBottom();
