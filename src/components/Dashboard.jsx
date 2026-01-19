@@ -232,6 +232,10 @@ const Dashboard = ({ childrenList = [], onSelect, onAddChild, onDeleteChild, onL
                 >
                     로그아웃
                 </button>
+
+
+                {/* 앱 설치 버튼 (조건부 렌더링) */}
+                <AppInstallButton />
             </main>
 
             <footer style={{ marginTop: '60px', textAlign: 'center' }}>
@@ -239,157 +243,161 @@ const Dashboard = ({ childrenList = [], onSelect, onAddChild, onDeleteChild, onL
             </footer>
 
             {/* 초대 코드 입력 모달 */}
-            {isJoining && (
-                <div style={{
-                    position: 'fixed',
-                    top: 0, left: 0, right: 0, bottom: 0,
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: 2000
-                }}>
+            {
+                isJoining && (
                     <div style={{
-                        backgroundColor: 'white',
-                        padding: '30px',
-                        borderRadius: '24px',
-                        width: '90%',
-                        maxWidth: '320px',
-                        textAlign: 'center'
+                        position: 'fixed',
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 2000
                     }}>
-                        <h3 style={{ marginBottom: '15px', color: '#333' }}>초대 코드 입력</h3>
-                        <p style={{ fontSize: '0.9rem', color: '#666', marginBottom: '20px' }}>
-                            가족에게 공유받은 6자리 코드를 입력해주세요.
-                        </p>
-                        <input
-                            type="text"
-                            value={inviteCode}
-                            onChange={(e) => setInviteCode(e.target.value.toUpperCase())}
-                            placeholder="예: ABC123"
-                            maxLength={6}
-                            style={{
-                                width: '100%',
-                                padding: '12px',
-                                fontSize: '1.2rem',
-                                textAlign: 'center',
-                                letterSpacing: '4px',
-                                border: '2px solid #ddd',
-                                borderRadius: '12px',
-                                marginBottom: '20px',
-                                fontWeight: 'bold',
-                                textTransform: 'uppercase'
-                            }}
-                        />
-                        <div style={{ display: 'flex', gap: '10px' }}>
-                            <button
-                                onClick={() => {
-                                    setIsJoining(false);
-                                    setInviteCode('');
-                                }}
+                        <div style={{
+                            backgroundColor: 'white',
+                            padding: '30px',
+                            borderRadius: '24px',
+                            width: '90%',
+                            maxWidth: '320px',
+                            textAlign: 'center'
+                        }}>
+                            <h3 style={{ marginBottom: '15px', color: '#333' }}>초대 코드 입력</h3>
+                            <p style={{ fontSize: '0.9rem', color: '#666', marginBottom: '20px' }}>
+                                가족에게 공유받은 6자리 코드를 입력해주세요.
+                            </p>
+                            <input
+                                type="text"
+                                value={inviteCode}
+                                onChange={(e) => setInviteCode(e.target.value.toUpperCase())}
+                                placeholder="예: ABC123"
+                                maxLength={6}
                                 style={{
-                                    flex: 1,
+                                    width: '100%',
                                     padding: '12px',
+                                    fontSize: '1.2rem',
+                                    textAlign: 'center',
+                                    letterSpacing: '4px',
+                                    border: '2px solid #ddd',
                                     borderRadius: '12px',
-                                    border: 'none',
-                                    backgroundColor: '#f1f3f5',
-                                    color: '#666',
+                                    marginBottom: '20px',
                                     fontWeight: 'bold',
-                                    cursor: 'pointer'
+                                    textTransform: 'uppercase'
                                 }}
-                            >
-                                취소
-                            </button>
-                            <button
-                                onClick={handleJoinFamily}
-                                style={{
-                                    flex: 1,
-                                    padding: '12px',
-                                    borderRadius: '12px',
-                                    border: 'none',
-                                    backgroundColor: 'var(--primary-color)',
-                                    color: 'white',
-                                    fontWeight: 'bold',
-                                    cursor: 'pointer'
-                                }}
-                            >
-                                확인
-                            </button>
+                            />
+                            <div style={{ display: 'flex', gap: '10px' }}>
+                                <button
+                                    onClick={() => {
+                                        setIsJoining(false);
+                                        setInviteCode('');
+                                    }}
+                                    style={{
+                                        flex: 1,
+                                        padding: '12px',
+                                        borderRadius: '12px',
+                                        border: 'none',
+                                        backgroundColor: '#f1f3f5',
+                                        color: '#666',
+                                        fontWeight: 'bold',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    취소
+                                </button>
+                                <button
+                                    onClick={handleJoinFamily}
+                                    style={{
+                                        flex: 1,
+                                        padding: '12px',
+                                        borderRadius: '12px',
+                                        border: 'none',
+                                        backgroundColor: 'var(--primary-color)',
+                                        color: 'white',
+                                        fontWeight: 'bold',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    확인
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
+                )
+            }
 
             {/* 삭제 확인 모달 */}
-            {isDeleteModalOpen && childToDelete && (
-                <div style={{
-                    position: 'fixed',
-                    top: 0, left: 0, right: 0, bottom: 0,
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: 2100
-                }}>
+            {
+                isDeleteModalOpen && childToDelete && (
                     <div style={{
-                        backgroundColor: 'white',
-                        padding: '30px',
-                        borderRadius: '24px',
-                        width: '90%',
-                        maxWidth: '320px',
-                        textAlign: 'center',
-                        boxShadow: '0 10px 25px rgba(0,0,0,0.2)'
+                        position: 'fixed',
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 2100
                     }}>
-                        <div style={{ fontSize: '3rem', marginBottom: '15px' }}>⚠️</div>
-                        <h3 style={{ marginBottom: '15px', color: '#E53E3E', fontWeight: 'bold' }}>
-                            정말 삭제하시겠습니까?
-                        </h3>
-                        <p style={{ fontSize: '0.95rem', color: '#4A5568', marginBottom: '10px', lineHeight: '1.5' }}>
-                            <strong>"{childToDelete.name}"</strong> 아이의 모든 기록이<br />
-                            영구적으로 삭제됩니다.
-                        </p>
-                        <p style={{ fontSize: '0.8rem', color: '#E53E3E', marginBottom: '25px', fontWeight: 'bold' }}>
-                            이 작업은 되돌릴 수 없습니다.
-                        </p>
+                        <div style={{
+                            backgroundColor: 'white',
+                            padding: '30px',
+                            borderRadius: '24px',
+                            width: '90%',
+                            maxWidth: '320px',
+                            textAlign: 'center',
+                            boxShadow: '0 10px 25px rgba(0,0,0,0.2)'
+                        }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '15px' }}>⚠️</div>
+                            <h3 style={{ marginBottom: '15px', color: '#E53E3E', fontWeight: 'bold' }}>
+                                정말 삭제하시겠습니까?
+                            </h3>
+                            <p style={{ fontSize: '0.95rem', color: '#4A5568', marginBottom: '10px', lineHeight: '1.5' }}>
+                                <strong>"{childToDelete.name}"</strong> 아이의 모든 기록이<br />
+                                영구적으로 삭제됩니다.
+                            </p>
+                            <p style={{ fontSize: '0.8rem', color: '#E53E3E', marginBottom: '25px', fontWeight: 'bold' }}>
+                                이 작업은 되돌릴 수 없습니다.
+                            </p>
 
-                        <div style={{ display: 'flex', gap: '10px' }}>
-                            <button
-                                onClick={() => {
-                                    setIsDeleteModalOpen(false);
-                                    setChildToDelete(null);
-                                }}
-                                style={{
-                                    flex: 1,
-                                    padding: '12px',
-                                    borderRadius: '12px',
-                                    border: 'none',
-                                    backgroundColor: '#EDF2F7',
-                                    color: '#4A5568',
-                                    fontWeight: 'bold',
-                                    cursor: 'pointer'
-                                }}
-                            >
-                                취소
-                            </button>
-                            <button
-                                onClick={handleConfirmDelete}
-                                style={{
-                                    flex: 1,
-                                    padding: '12px',
-                                    borderRadius: '12px',
-                                    border: 'none',
-                                    backgroundColor: '#E53E3E',
-                                    color: 'white',
-                                    fontWeight: 'bold',
-                                    cursor: 'pointer'
-                                }}
-                            >
-                                삭제하기
-                            </button>
+                            <div style={{ display: 'flex', gap: '10px' }}>
+                                <button
+                                    onClick={() => {
+                                        setIsDeleteModalOpen(false);
+                                        setChildToDelete(null);
+                                    }}
+                                    style={{
+                                        flex: 1,
+                                        padding: '12px',
+                                        borderRadius: '12px',
+                                        border: 'none',
+                                        backgroundColor: '#EDF2F7',
+                                        color: '#4A5568',
+                                        fontWeight: 'bold',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    취소
+                                </button>
+                                <button
+                                    onClick={handleConfirmDelete}
+                                    style={{
+                                        flex: 1,
+                                        padding: '12px',
+                                        borderRadius: '12px',
+                                        border: 'none',
+                                        backgroundColor: '#E53E3E',
+                                        color: 'white',
+                                        fontWeight: 'bold',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    삭제하기
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </div>
+                )
+            }
+        </div >
     );
 };
 
