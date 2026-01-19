@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     // 앱 초기 상태 판별
-    const checkStatus = () => {
+    const checkStatus = async () => {
       try {
         const currentUser = DataService.getCurrentUser();
 
@@ -66,6 +66,13 @@ function App() {
         if (!currentUser) {
           setAppStage('login');
           return;
+        }
+
+        // 로그인 상태라면 클라우드 데이터 동기화 시도
+        try {
+          await DataService.syncFromServer();
+        } catch (syncError) {
+          console.error('App: Sync with server failed on init', syncError);
         }
 
         // 사용자가 접근 가능한 아이 목록 로드
@@ -137,9 +144,11 @@ function App() {
     setAppStage('dashboard');
   };
 
-  const handleChildSelect = (child) => {
+  const handleChildSelect = async (child) => {
     setChildInfo(child);
     DataService.setSelectedChildId(child.id);
+    // 선택된 아이의 상세 정보(체크리스트 등) 동기화
+    await DataService.syncFromServer();
     setAppStage('main');
   };
 

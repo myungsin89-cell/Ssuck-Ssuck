@@ -174,11 +174,14 @@ class DataService {
     // --- Sync Helper ---
     async syncFromServer() {
         try {
-            const children = await FirestoreService.getChildren();
-            const logs = await FirestoreService.getLogs();
+            const currentUser = this.getCurrentUser();
+            if (!currentUser) return null;
 
-            // 로컬에 *병합* 저장 (덮어쓰기 방지)
-            if (children.length > 0) {
+            const uid = currentUser.userId;
+
+            // 1. 아이 정보 (Children)
+            const children = await FirestoreService.getChildren();
+            if (children && children.length > 0) {
                 const currentMap = this.getAllChildrenMap();
                 children.forEach(child => {
                     currentMap[child.id] = child;
@@ -186,44 +189,45 @@ class DataService {
                 localStorage.setItem(STORAGE_KEYS.CHILDREN, JSON.stringify(currentMap));
 
                 // [CRITICAL] 내 아이 목록(USER_CHILDREN) 동기화
-                const currentUser = this.getCurrentUser();
-                if (currentUser) {
-                    const userChildren = this.getUserChildrenMap();
-                    if (!userChildren[currentUser.userId]) {
-                        userChildren[currentUser.userId] = [];
-                    }
-                    children.forEach(child => {
-                        const cid = String(child.id);
-                        if (!userChildren[currentUser.userId].includes(cid)) {
-                            userChildren[currentUser.userId].push(cid);
-                        }
-                    });
-                    localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
-                }
+                const userChildren = this.getUserChildrenMap();
+                userChildren[uid] = children.map(c => String(c.id));
+                localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
             }
-            if (logs.length > 0) localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(logs));
 
-            // 모든 아이의 체크리스트를 가져와서 구조화 (필요 시)
-            // 여기서는 단순함을 위해 현재 선택된 아이 중심 또는 전체 구조 유지가 필요함
-            // 일단 전체 로그와 아이 정보는 동기화
+            // 2. 관찰 일기 (Logs)
+            const logs = await FirestoreService.getLogs();
+            if (logs && logs.length > 0) {
+                localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(logs));
+            }
 
+            // 3. 성장 기록 (Growth) - 모든 아이의 성장 기록을 가져옴
+            const allGrowth = await FirestoreService.getAllGrowthData();
+            if (allGrowth && allGrowth.length > 0) {
+                localStorage.setItem(STORAGE_KEYS.GROWTH, JSON.stringify(allGrowth));
+            }
+
+            // 4. 예방접종 및 건강 기록 (선택된 아이 중심 또는 전체)
             const selectedId = this.getSelectedChildId();
             if (selectedId) {
                 const checklist = await FirestoreService.getChecklist(selectedId);
-                const growth = await FirestoreService.getGrowthData(selectedId);
+                const vaccination = await FirestoreService.getVaccinationRecords(selectedId);
+                const health = await FirestoreService.getHealthRecords(selectedId);
 
-                // 로컬 저장소 구조 업데이트
+                // 체크리스트 동기화
                 const allChecklists = this.getAllChecklists();
                 allChecklists[selectedId] = checklist;
                 localStorage.setItem(STORAGE_KEYS.CHECKLIST, JSON.stringify(allChecklists));
 
-                if (growth.length > 0) localStorage.setItem(STORAGE_KEYS.GROWTH, JSON.stringify(growth));
+                // 예방접종 동기화
+                const allVaccinations = JSON.parse(localStorage.getItem(STORAGE_KEYS.VACCINATION) || '{}');
+                allVaccinations[selectedId] = vaccination;
+                localStorage.setItem(STORAGE_KEYS.VACCINATION, JSON.stringify(allVaccinations));
+
+                // 건강 기록 동기화
+                const allHealth = JSON.parse(localStorage.getItem(STORAGE_KEYS.HEALTH_RECORDS) || '{}');
+                allHealth[selectedId] = health;
+                localStorage.setItem(STORAGE_KEYS.HEALTH_RECORDS, JSON.stringify(allHealth));
             }
-
-            // [FIXED] 중복 저장 및 데이터 구조 오염 방지를 위해 삭제
-            // if (children.length > 0) localStorage.setItem(STORAGE_KEYS.CHILDREN, JSON.stringify(children));
-
-            if (logs.length > 0) localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(logs));
 
             return { children, logs };
         } catch (error) {
@@ -561,8 +565,15 @@ class DataService {
         return data ? JSON.parse(data) : null;
     }
 
-    setCurrentUser(userId, userName) {
+    async setCurrentUser(userId, userName) {
+        if (!userId) {
+            localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
+            return;
+        }
         localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify({ userId, name: userName }));
+
+        // 로그인 시 클라우드에서 데이터 가져오기
+        await this.syncFromServer();
     }
 
     // --- User Authentication ---

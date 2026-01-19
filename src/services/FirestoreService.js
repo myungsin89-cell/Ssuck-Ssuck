@@ -204,6 +204,17 @@ class FirestoreService {
         return entries;
     }
 
+    async getAllGrowthData() {
+        const uid = this.getUserId();
+        const growthRef = collection(db, 'users', uid, 'growth');
+        const querySnapshot = await getDocs(growthRef);
+        const entries = [];
+        querySnapshot.forEach((doc) => {
+            entries.push(doc.data());
+        });
+        return entries;
+    }
+
     async deleteGrowthEntry(entryId) {
         const uid = this.getUserId();
         await deleteDoc(doc(db, 'users', uid, 'growth', String(entryId)));

@@ -32,8 +32,8 @@ const Login = ({ onLogin }) => {
                 return;
             }
 
-            // 현재 사용자 정보 저장
-            DataService.setCurrentUser(user.userId, user.name);
+            // 현재 사용자 정보 저장 (내부에서 syncFromServer 호출됨)
+            await DataService.setCurrentUser(user.userId, user.name);
 
             onLogin({ id: user.userId, nickname: user.name });
         } catch (error) {
@@ -73,7 +73,7 @@ const Login = ({ onLogin }) => {
             }
 
             // 자동 로그인
-            DataService.setCurrentUser(userId, name);
+            await DataService.setCurrentUser(userId, name);
             onLogin({ id: userId, nickname: name });
         } catch (error) {
             console.error('SignUp error:', error);
