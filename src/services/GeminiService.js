@@ -42,11 +42,14 @@ class GeminiService {
     init() {
         if (genAI) {
             try {
-                // apiVersion을 'v1'으로 명시하여 404 에러 방지
-                this.model = genAI.getGenerativeModel(
-                    { model: "gemini-1.5-flash" },
-                    { apiVersion: 'v1', systemInstruction: SYSTEM_INSTRUCTION }
-                );
+                // 사용자가 로컬에서 성공했던 2.0-flash 모델로 원복
+                const modelName = "gemini-2.0-flash";
+                console.log(`[Gemini] Initializing with model: ${modelName}`);
+
+                this.model = genAI.getGenerativeModel({
+                    model: modelName,
+                    systemInstruction: SYSTEM_INSTRUCTION
+                });
             } catch (error) {
                 console.error("Model Init Failed:", error);
             }
@@ -171,11 +174,9 @@ class GeminiService {
         }
 
         try {
-            // 분석 모델도 v1으로 안정화
-            const model = genAI.getGenerativeModel(
-                { model: "gemini-1.5-flash" },
-                { apiVersion: 'v1' }
-            );
+            // 분석 모델도 2.0-flash로 원복
+            const modelName = "gemini-2.0-flash";
+            const model = genAI.getGenerativeModel({ model: modelName });
 
             const prompt = `
                 당신은 세계 최고의 아동 발달 전문가입니다.
