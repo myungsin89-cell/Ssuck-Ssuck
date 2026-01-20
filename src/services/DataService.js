@@ -585,29 +585,26 @@ class DataService {
             const isMember = familyGroup.members.some(m => String(m.userId) === String(userId));
 
             if (isMember) {
-                // 이미 멤버지만 사용자-아이 연결이 없을 수 있으므로 확인
+                // 이미 멤버인 경우 - 강제로 동기화하여 아이 정보 복구
                 const userChildren = this.getUserChildrenMap();
                 if (!userChildren[userId]) {
                     userChildren[userId] = [];
                 }
+
+                // 아이 ID가 없으면 추가
                 if (!userChildren[userId].includes(String(familyGroup.childId))) {
                     userChildren[userId].push(String(familyGroup.childId));
                     localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
                     await FirestoreService.saveUserChildren(userId, userChildren[userId]);
-
-                    // 아이 정보 동기화
-                    await this.syncFromServer();
-
-                    return {
-                        success: true,
-                        message: '가족 그룹에 다시 연결되었습니다! 🎉',
-                        familyGroup
-                    };
                 }
 
+                // 항상 서버에서 최신 데이터 동기화
+                await this.syncFromServer();
+
                 return {
-                    success: false,
-                    message: '이미 가입된 그룹입니다.'
+                    success: true,
+                    message: '가족 그룹에 다시 연결되었습니다! 🎉',
+                    familyGroup
                 };
             }
 
