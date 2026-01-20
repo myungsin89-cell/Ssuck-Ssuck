@@ -264,6 +264,87 @@ class FirestoreService {
         await deleteDoc(doc(db, 'users', uid, 'growth', String(entryId)));
     }
 
+    // 가족 그룹 멤버들의 모든 로그 가져오기 (공유 기록)
+    async getSharedLogs(childId, userId) {
+        try {
+            // 1. 사용자가 속한 가족 그룹 찾기
+            const familyGroups = await this.getFamilyGroupsByUserId(userId);
+
+            // 해당 아이에 대한 가족 그룹 찾기
+            const targetGroup = familyGroups.find(g => String(g.childId) === String(childId));
+
+            if (!targetGroup || !targetGroup.members) {
+                // 가족 그룹이 없으면 자신의 로그만 반환
+                return this.getLogs(childId);
+            }
+
+            // 2. 모든 멤버의 로그 가져오기
+            const allLogs = [];
+
+            for (const member of targetGroup.members) {
+                const memberLogsRef = collection(db, 'users', member.userId, 'logs');
+                const q = query(memberLogsRef, where('childId', '==', Number(childId)));
+                const querySnapshot = await getDocs(q);
+
+                querySnapshot.forEach((doc) => {
+                    const logData = doc.data();
+                    // 작성자 정보 추가
+                    logData.authorName = member.name;
+                    logData.authorId = member.userId;
+                    allLogs.push(logData);
+                });
+            }
+
+            // 최신순 정렬
+            allLogs.sort((a, b) => b.id - a.id);
+
+            return allLogs;
+        } catch (error) {
+            console.error('getSharedLogs error:', error);
+            return [];
+        }
+    }
+
+    // 가족 그룹 멤버들의 모든 성장 기록 가져오기
+    async getSharedGrowthData(childId, userId) {
+        try {
+            // 1. 사용자가 속한 가족 그룹 찾기
+            const familyGroups = await this.getFamilyGroupsByUserId(userId);
+
+            // 해당 아이에 대한 가족 그룹 찾기
+            const targetGroup = familyGroups.find(g => String(g.childId) === String(childId));
+
+            if (!targetGroup || !targetGroup.members) {
+                // 가족 그룹이 없으면 자신의 기록만 반환
+                return this.getGrowthData(childId);
+            }
+
+            // 2. 모든 멤버의 성장 기록 가져오기
+            const allGrowth = [];
+
+            for (const member of targetGroup.members) {
+                const memberGrowthRef = collection(db, 'users', member.userId, 'growth');
+                const q = query(memberGrowthRef, where('childId', '==', Number(childId)));
+                const querySnapshot = await getDocs(q);
+
+                querySnapshot.forEach((doc) => {
+                    const growthData = doc.data();
+                    growthData.authorName = member.name;
+                    growthData.authorId = member.userId;
+                    allGrowth.push(growthData);
+                });
+            }
+
+            // 날짜순 정렬
+            allGrowth.sort((a, b) => a.id - b.id);
+
+            return allGrowth;
+        } catch (error) {
+            console.error('getSharedGrowthData error:', error);
+            return [];
+        }
+    }
+
     // --- Vaccination Records ---
     async saveVaccinationRecords(childId, records) {
         if (!childId) return;

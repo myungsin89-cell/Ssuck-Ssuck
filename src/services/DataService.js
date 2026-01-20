@@ -212,8 +212,18 @@ class DataService {
                 localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
             }
 
-            // 2. 관찰 일기 (Logs) - 병합 방식으로 변경
-            const serverLogs = await FirestoreService.getLogs();
+            // 2. 관찰 일기 (Logs) - 가족 멤버들의 공유 기록 포함
+            const selectedId = this.getSelectedChildId();
+            let serverLogs = [];
+
+            if (selectedId) {
+                // 가족 멤버들의 공유 로그 가져오기
+                serverLogs = await FirestoreService.getSharedLogs(selectedId, uid);
+            } else {
+                // 선택된 아이가 없으면 자신의 로그만
+                serverLogs = await FirestoreService.getLogs();
+            }
+
             const localLogsData = localStorage.getItem(STORAGE_KEYS.LOGS);
             const localLogs = localLogsData ? JSON.parse(localLogsData) : [];
 
@@ -231,8 +241,16 @@ class DataService {
                 localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(mergedLogs));
             }
 
-            // 3. 성장 기록 (Growth) - 병합 방식으로 변경
-            const serverGrowth = await FirestoreService.getAllGrowthData();
+            // 3. 성장 기록 (Growth) - 가족 멤버들의 공유 기록 포함
+            let serverGrowth = [];
+
+            if (selectedId) {
+                // 가족 멤버들의 공유 성장 기록 가져오기
+                serverGrowth = await FirestoreService.getSharedGrowthData(selectedId, uid);
+            } else {
+                serverGrowth = await FirestoreService.getAllGrowthData();
+            }
+
             const localGrowthData = localStorage.getItem(STORAGE_KEYS.GROWTH);
             const localGrowth = localGrowthData ? JSON.parse(localGrowthData) : [];
 
@@ -249,7 +267,6 @@ class DataService {
             }
 
             // 4. 예방접종 및 건강 기록 (선택된 아이 중심) - 병합 방식
-            const selectedId = this.getSelectedChildId();
             if (selectedId) {
                 const serverChecklist = await FirestoreService.getChecklist(selectedId);
                 const serverVaccination = await FirestoreService.getVaccinationRecords(selectedId);
