@@ -268,7 +268,8 @@ class DataService {
 
             // 4. 예방접종 및 건강 기록 (선택된 아이 중심) - 병합 방식
             if (selectedId) {
-                const serverChecklist = await FirestoreService.getChecklist(selectedId);
+                // 가족 멤버들의 공유 체크리스트 가져오기
+                const serverChecklist = await FirestoreService.getSharedChecklist(selectedId, uid);
                 const serverVaccination = await FirestoreService.getVaccinationRecords(selectedId);
                 const serverHealth = await FirestoreService.getHealthRecords(selectedId);
 

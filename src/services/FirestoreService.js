@@ -225,6 +225,46 @@ class FirestoreService {
         return docSnap.exists() ? docSnap.data().items : {};
     }
 
+    // 가족 그룹 멤버들의 체크리스트 병합
+    async getSharedChecklist(childId, userId) {
+        try {
+            if (!childId) return {};
+
+            // 1. 사용자가 속한 가족 그룹 찾기
+            const familyGroups = await this.getFamilyGroupsByUserId(userId);
+            const targetGroup = familyGroups.find(g => String(g.childId) === String(childId));
+
+            if (!targetGroup || !targetGroup.members) {
+                return this.getChecklist(childId);
+            }
+
+            // 2. 모든 멤버의 체크리스트 병합 (하나라도 체크되어 있으면 체크됨)
+            let mergedChecklist = {};
+
+            for (const member of targetGroup.members) {
+                const statusRef = doc(db, 'users', member.userId, 'children', String(childId), 'status', 'checklist');
+                const docSnap = await getDoc(statusRef);
+
+                if (docSnap.exists() && docSnap.data().items) {
+                    const memberItems = docSnap.data().items;
+                    // 병합: 하나라도 true면 true
+                    for (const [key, value] of Object.entries(memberItems)) {
+                        if (value === true) {
+                            mergedChecklist[key] = true;
+                        } else if (mergedChecklist[key] === undefined) {
+                            mergedChecklist[key] = value;
+                        }
+                    }
+                }
+            }
+
+            return mergedChecklist;
+        } catch (error) {
+            console.error('getSharedChecklist error:', error);
+            return {};
+        }
+    }
+
     // --- Growth Data ---
     async saveGrowthEntry(entry) {
         const uid = this.getUserId();
