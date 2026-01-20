@@ -212,38 +212,71 @@ class DataService {
                 localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
             }
 
-            // 2. 관찰 일기 (Logs)
-            const logs = await FirestoreService.getLogs();
-            if (logs && logs.length > 0) {
-                localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(logs));
+            // 2. 관찰 일기 (Logs) - 병합 방식으로 변경
+            const serverLogs = await FirestoreService.getLogs();
+            const localLogsData = localStorage.getItem(STORAGE_KEYS.LOGS);
+            const localLogs = localLogsData ? JSON.parse(localLogsData) : [];
+
+            // 서버와 로컬 데이터 병합 (ID 기준으로 중복 제거, 서버 데이터 우선)
+            const mergedLogs = [...serverLogs];
+            localLogs.forEach(localLog => {
+                if (!mergedLogs.some(log => String(log.id) === String(localLog.id))) {
+                    mergedLogs.push(localLog);
+                }
+            });
+
+            if (mergedLogs.length > 0) {
+                // 최신순 정렬
+                mergedLogs.sort((a, b) => b.id - a.id);
+                localStorage.setItem(STORAGE_KEYS.LOGS, JSON.stringify(mergedLogs));
             }
 
-            // 3. 성장 기록 (Growth) - 모든 아이의 성장 기록을 가져옴
-            const allGrowth = await FirestoreService.getAllGrowthData();
-            if (allGrowth && allGrowth.length > 0) {
-                localStorage.setItem(STORAGE_KEYS.GROWTH, JSON.stringify(allGrowth));
+            // 3. 성장 기록 (Growth) - 병합 방식으로 변경
+            const serverGrowth = await FirestoreService.getAllGrowthData();
+            const localGrowthData = localStorage.getItem(STORAGE_KEYS.GROWTH);
+            const localGrowth = localGrowthData ? JSON.parse(localGrowthData) : [];
+
+            // 서버와 로컬 데이터 병합
+            const mergedGrowth = [...serverGrowth];
+            localGrowth.forEach(localEntry => {
+                if (!mergedGrowth.some(entry => String(entry.id) === String(localEntry.id))) {
+                    mergedGrowth.push(localEntry);
+                }
+            });
+
+            if (mergedGrowth.length > 0) {
+                localStorage.setItem(STORAGE_KEYS.GROWTH, JSON.stringify(mergedGrowth));
             }
 
-            // 4. 예방접종 및 건강 기록 (선택된 아이 중심 또는 전체)
+            // 4. 예방접종 및 건강 기록 (선택된 아이 중심) - 병합 방식
             const selectedId = this.getSelectedChildId();
             if (selectedId) {
-                const checklist = await FirestoreService.getChecklist(selectedId);
-                const vaccination = await FirestoreService.getVaccinationRecords(selectedId);
-                const health = await FirestoreService.getHealthRecords(selectedId);
+                const serverChecklist = await FirestoreService.getChecklist(selectedId);
+                const serverVaccination = await FirestoreService.getVaccinationRecords(selectedId);
+                const serverHealth = await FirestoreService.getHealthRecords(selectedId);
 
-                // 체크리스트 동기화
+                // 체크리스트 병합
                 const allChecklists = this.getAllChecklists();
-                allChecklists[selectedId] = checklist;
+                const localChecklist = allChecklists[selectedId] || {};
+                allChecklists[selectedId] = { ...localChecklist, ...serverChecklist };
                 localStorage.setItem(STORAGE_KEYS.CHECKLIST, JSON.stringify(allChecklists));
 
-                // 예방접종 동기화
+                // 예방접종 병합
                 const allVaccinations = JSON.parse(localStorage.getItem(STORAGE_KEYS.VACCINATION) || '{}');
-                allVaccinations[selectedId] = vaccination;
+                const localVaccination = allVaccinations[selectedId] || {};
+                allVaccinations[selectedId] = { ...localVaccination, ...serverVaccination };
                 localStorage.setItem(STORAGE_KEYS.VACCINATION, JSON.stringify(allVaccinations));
 
-                // 건강 기록 동기화
+                // 건강 기록 병합
                 const allHealth = JSON.parse(localStorage.getItem(STORAGE_KEYS.HEALTH_RECORDS) || '{}');
-                allHealth[selectedId] = health;
+                const localHealthRecords = allHealth[selectedId] || [];
+                const mergedHealth = [...serverHealth];
+                localHealthRecords.forEach(localRecord => {
+                    if (!mergedHealth.some(record => String(record.id) === String(localRecord.id))) {
+                        mergedHealth.push(localRecord);
+                    }
+                });
+                allHealth[selectedId] = mergedHealth;
                 localStorage.setItem(STORAGE_KEYS.HEALTH_RECORDS, JSON.stringify(allHealth));
             }
 
