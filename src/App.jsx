@@ -41,22 +41,23 @@ function App() {
         if (inviteCode) {
           if (currentUser) {
             // 로그인 상태면 즉시 가입 시도
-            DataService.joinFamilyGroup(inviteCode, currentUser.userId, currentUser.name)
-              .then(() => {
-                alert('가족 그룹에 성공적으로 합류했습니다! 🎉');
-                // URL 파라미터 깔끔하게 제거
-                window.history.replaceState({}, document.title, window.location.pathname);
-                // 데이터 갱신 (가입 후 내 아이 목록 업데이트)
-                const updatedList = DataService.getChildren(currentUser.userId);
-                setChildren(updatedList);
-              })
-              .catch(err => {
-                console.error('Auto-join failed:', err);
-                // 이미 가입된 경우 등 에러 처리 (조용히 넘어가거나 알림)
-                if (err.message !== '이미 가입된 그룹입니다.' && err.message !== '유효하지 않은 초대 코드입니다.') {
-                  // alert('초대 코드를 확인해주세요.');
-                }
-              });
+            const result = await DataService.joinFamilyGroup(inviteCode, currentUser.userId, currentUser.name);
+
+            if (result.success) {
+              alert(result.message);
+              // URL 파라미터 깔끔하게 제거
+              window.history.replaceState({}, document.title, window.location.pathname);
+              // 데이터 갱신 (가입 후 내 아이 목록 업데이트)
+              const updatedList = DataService.getChildren(currentUser.userId);
+              setChildren(updatedList);
+            } else {
+              // 에러 메시지 표시 (이미 가입된 경우는 조용히 넘어감)
+              if (result.message !== '이미 가입된 그룹입니다.') {
+                alert(result.message);
+              }
+              // URL 파라미터 제거
+              window.history.replaceState({}, document.title, window.location.pathname);
+            }
           } else {
             // 비로그인 상태: 로그인 후 처리를 위해 저장
             sessionStorage.setItem('pendingInviteCode', inviteCode);

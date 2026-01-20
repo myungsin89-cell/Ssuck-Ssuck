@@ -538,17 +538,62 @@ class DataService {
 
     // 그룹 가입하기
     async joinFamilyGroup(inviteCode, userId, userName) {
-        const familyGroup = this.findFamilyGroupByInviteCode(inviteCode);
+        try {
+            // 1. 로컬에서 먼저 검색
+            let familyGroup = this.findFamilyGroupByInviteCode(inviteCode);
 
-        if (!familyGroup) {
-            throw new Error('유효하지 않은 초대 코드입니다.');
-        }
+            // 2. 로컬에 없으면 Firestore에서 검색
+            if (!familyGroup) {
+                console.log('Local search failed, searching Firestore for invite code:', inviteCode);
+                familyGroup = await FirestoreService.getFamilyGroupByInviteCode(inviteCode);
 
-        // 이미 멤버인지 확인
-        const isMember = familyGroup.members.some(m => String(m.userId) === String(userId));
+                if (familyGroup) {
+                    console.log('Found family group in Firestore:', familyGroup.familyGroupId);
+                    // Firestore에서 찾은 그룹을 로컬에 저장
+                    const allGroups = this.getAllFamilyGroups();
+                    allGroups[familyGroup.familyGroupId] = familyGroup;
+                    localStorage.setItem(STORAGE_KEYS.FAMILY_GROUPS, JSON.stringify(allGroups));
+                }
+            }
 
-        // 1. 가족 그룹 멤버 추가 (아직 멤버가 아니면)
-        if (!isMember) {
+            if (!familyGroup) {
+                return {
+                    success: false,
+                    message: '유효하지 않은 초대 코드입니다.'
+                };
+            }
+
+            // 3. 이미 멤버인지 확인
+            const isMember = familyGroup.members.some(m => String(m.userId) === String(userId));
+
+            if (isMember) {
+                // 이미 멤버지만 사용자-아이 연결이 없을 수 있으므로 확인
+                const userChildren = this.getUserChildrenMap();
+                if (!userChildren[userId]) {
+                    userChildren[userId] = [];
+                }
+                if (!userChildren[userId].includes(String(familyGroup.childId))) {
+                    userChildren[userId].push(String(familyGroup.childId));
+                    localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
+                    await FirestoreService.saveUserChildren(userId, userChildren[userId]);
+
+                    // 아이 정보 동기화
+                    await this.syncFromServer();
+
+                    return {
+                        success: true,
+                        message: '가족 그룹에 다시 연결되었습니다! 🎉',
+                        familyGroup
+                    };
+                }
+
+                return {
+                    success: false,
+                    message: '이미 가입된 그룹입니다.'
+                };
+            }
+
+            // 4. 멤버 추가
             familyGroup.members.push({
                 userId,
                 name: userName,
@@ -561,23 +606,38 @@ class DataService {
             localStorage.setItem(STORAGE_KEYS.FAMILY_GROUPS, JSON.stringify(allGroups));
 
             // Firestore 동기화
-            FirestoreService.saveFamilyGroup(familyGroup).catch(err => console.error('Cloud family group update failed:', err));
-        }
+            await FirestoreService.saveFamilyGroup(familyGroup);
 
-        // 2. [CRITICAL] 사용자-아이 연결 (내 목록에 추가)
-        const userChildren = this.getUserChildrenMap();
-        if (!userChildren[userId]) {
-            userChildren[userId] = [];
-        }
-        if (!userChildren[userId].includes(String(familyGroup.childId))) {
-            userChildren[userId].push(String(familyGroup.childId));
-            localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
+            // 5. 사용자-아이 연결 추가
+            const userChildren = this.getUserChildrenMap();
+            if (!userChildren[userId]) {
+                userChildren[userId] = [];
+            }
+            if (!userChildren[userId].includes(String(familyGroup.childId))) {
+                userChildren[userId].push(String(familyGroup.childId));
+                localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
 
-            // Firestore에 사용자-아이 연결 저장
-            FirestoreService.saveUserChildren(userId, userChildren[userId]).catch(err => console.error('Cloud user-children mapping save failed:', err));
-        }
+                // Firestore에 사용자-아이 연결 저장
+                await FirestoreService.saveUserChildren(userId, userChildren[userId]);
+            }
 
-        return familyGroup;
+            // 6. 아이 정보 동기화
+            await this.syncFromServer();
+
+            const ownerName = familyGroup.members.find(m => m.role === 'owner')?.name || '가족';
+
+            return {
+                success: true,
+                message: `${ownerName}님의 가족 그룹에 합류했습니다! 🎉`,
+                familyGroup
+            };
+        } catch (error) {
+            console.error('joinFamilyGroup error:', error);
+            return {
+                success: false,
+                message: '초대 코드 처리 중 오류가 발생했습니다.'
+            };
+        }
     }
 
     getCurrentUser() {
