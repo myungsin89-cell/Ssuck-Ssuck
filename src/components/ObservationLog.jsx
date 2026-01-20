@@ -250,20 +250,18 @@ const ObservationLog = ({ childId, currentAgeMonths = 0 }) => {
 
                                     {log.aiAnalysis && (
                                         <div style={{
-                                            marginTop: '10px',
-                                            padding: '10px',
-                                            backgroundColor: '#f8f9fa',
-                                            borderRadius: '8px',
-                                            borderLeft: '3px solid #1890ff',
-                                            fontSize: '0.85rem'
+                                            marginTop: '8px',
+                                            padding: '8px 10px',
+                                            backgroundColor: '#f0f7ff',
+                                            borderRadius: '6px',
+                                            fontSize: '0.85rem',
+                                            color: '#1890ff',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '6px'
                                         }}>
-                                            <div style={{ marginBottom: '4px', fontWeight: 'bold', color: '#1890ff', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                                                <span>{getCategoryIcon(log.aiAnalysis.categoryId)}</span>
-                                                AI 분석: {log.aiAnalysis.matchedAgeLabel} - {log.aiAnalysis.milestoneText}
-                                            </div>
-                                            <div style={{ color: '#666', fontStyle: 'italic' }}>
-                                                "{log.aiAnalysis.comment}"
-                                            </div>
+                                            <span>{getCategoryIcon(log.aiAnalysis.categoryId)}</span>
+                                            <span>{log.aiAnalysis.matchedAgeLabel} - {log.aiAnalysis.milestoneText}</span>
                                         </div>
                                     )}
 
