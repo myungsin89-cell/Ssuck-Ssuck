@@ -179,18 +179,36 @@ class DataService {
 
             const uid = currentUser.userId;
 
-            // 1. 아이 정보 (Children)
-            const children = await FirestoreService.getChildren();
-            if (children && children.length > 0) {
+            // 0. 가족 그룹 정보 동기화
+            const familyGroups = await FirestoreService.getFamilyGroupsByUserId(uid);
+            if (familyGroups && familyGroups.length > 0) {
+                const allGroups = this.getAllFamilyGroups();
+                familyGroups.forEach(group => {
+                    allGroups[group.familyGroupId] = group;
+                });
+                localStorage.setItem(STORAGE_KEYS.FAMILY_GROUPS, JSON.stringify(allGroups));
+            }
+
+            // 1. 아이 정보 (Children) - 직접 등록한 아이 + 공유받은 아이
+            const myChildren = await FirestoreService.getChildren();
+            const sharedChildren = await FirestoreService.getSharedChildren(uid);
+
+            // 중복 제거하여 병합
+            const allChildrenArray = [...myChildren, ...sharedChildren];
+            const uniqueChildren = Array.from(
+                new Map(allChildrenArray.map(child => [child.id, child])).values()
+            );
+
+            if (uniqueChildren.length > 0) {
                 const currentMap = this.getAllChildrenMap();
-                children.forEach(child => {
+                uniqueChildren.forEach(child => {
                     currentMap[child.id] = child;
                 });
                 localStorage.setItem(STORAGE_KEYS.CHILDREN, JSON.stringify(currentMap));
 
                 // [CRITICAL] 내 아이 목록(USER_CHILDREN) 동기화
                 const userChildren = this.getUserChildrenMap();
-                userChildren[uid] = children.map(c => String(c.id));
+                userChildren[uid] = uniqueChildren.map(c => String(c.id));
                 localStorage.setItem(STORAGE_KEYS.USER_CHILDREN, JSON.stringify(userChildren));
             }
 
@@ -229,7 +247,7 @@ class DataService {
                 localStorage.setItem(STORAGE_KEYS.HEALTH_RECORDS, JSON.stringify(allHealth));
             }
 
-            return { children, logs };
+            return { children: uniqueChildren, logs };
         } catch (error) {
             console.error('Server sync failed:', error);
             return null;

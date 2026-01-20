@@ -127,6 +127,42 @@ class FirestoreService {
         await deleteDoc(doc(db, 'users', uid, 'children', String(childId)));
     }
 
+    // 가족 그룹을 통해 공유받은 아이 정보 가져오기
+    async getSharedChildren(userId) {
+        try {
+            // 1. 사용자가 속한 가족 그룹 찾기
+            const familyGroups = await this.getFamilyGroupsByUserId(userId);
+
+            if (!familyGroups || familyGroups.length === 0) {
+                return [];
+            }
+
+            // 2. 각 그룹의 아이 정보 가져오기
+            const sharedChildren = [];
+
+            for (const group of familyGroups) {
+                if (!group.childId) continue;
+
+                // 아이의 소유자 찾기
+                const owner = group.members.find(m => m.role === 'owner');
+                if (!owner) continue;
+
+                // 소유자의 children 컬렉션에서 아이 정보 가져오기
+                const childRef = doc(db, 'users', owner.userId, 'children', String(group.childId));
+                const childDoc = await getDoc(childRef);
+
+                if (childDoc.exists()) {
+                    sharedChildren.push(childDoc.data());
+                }
+            }
+
+            return sharedChildren;
+        } catch (error) {
+            console.error('FirestoreService getSharedChildren error:', error);
+            return [];
+        }
+    }
+
     // --- Observation Logs ---
     async saveLog(logEntry) {
         const uid = this.getUserId();
